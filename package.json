@@ -8,28 +8,26 @@
     "startmon": "nodemon ./bin/www"
   },
   "author": "Cat, Sang, Ming, Tyler",
-  "contributors": [{
-    "name": "Cat Lau",
-    "email": "foo@foo.com"
-    },{
-    "name": "Sangmin Lee",
-    "email": "poo@poo.com"
-    },{
-    "name": "Ming Lei",
-    "email": "doop@doop.com"
-
-    },{
-    "name": "Tyler Perwarski",
-    "email": "loop@loop.com"
-  }],
+  "contributors": [
+    {
+      "name": "Cat Lau",
+      "email": "foo@foo.com"
+    },
+    {
+      "name": "Sangmin Lee",
+      "email": "poo@poo.com"
+    },
+    {
+      "name": "Ming Lei",
+      "email": "doop@doop.com"
+    },
+    {
+      "name": "Tyler Perwarski",
+      "email": "loop@loop.com"
+    }
+  ],
   "dependencies": {
-    "body-parser": "~1.12.0",
-    "cookie-parser": "~1.3.4",
-    "debug": "~2.1.1",
-    "express": "~4.12.2",
-    "jade": "~1.9.2",
-    "morgan": "~1.5.1",
-    "serve-favicon": "~2.2.0"
+    "angular": "^1.4.1"
   },
   "repository": {
     "type": "git",
@@ -39,9 +37,9 @@
     "url": "https://github.com/smlee/pathfinder-ui/issues"
   },
   "keywords": [
-  "router",
-  "path",
-  "postman"
+    "router",
+    "path",
+    "postman"
   ],
   "analyze": true,
   "license": "MIT"
