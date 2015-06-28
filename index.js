@@ -25,7 +25,7 @@ module.exports = require('./lib/pathfinder-ui.js');
 
 //I will not look for you, I will not pursue you.
 
-//But if you dont', I will look for you.
+//But if you don't, I will look for you.
 
 //I will find you.
 
