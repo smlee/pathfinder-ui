@@ -1,6 +1,6 @@
 {
   "name": "pathfinder-ui",
-  "version": "0.1.00000000111",
+  "version": "0.1.11112",
   "private": false,
   "preferGlobal": false,
   "scripts": {
@@ -22,7 +22,7 @@
       "email": "doop@doop.com"
     },
     {
-      "name": "Tyler Perwarski",
+      "name": "Tyler (Ler) Perwarski",
       "email": "loop@loop.com"
     }
   ],
