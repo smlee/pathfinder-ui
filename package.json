@@ -3,10 +3,6 @@
   "version": "0.1.111131",
   "private": false,
   "preferGlobal": false,
-  "scripts": {
-    "start": "node ./bin/www",
-    "startmon": "nodemon ./bin/www"
-  },
   "author": "Cat, Sang, Ming, Tyler",
   "contributors": [
     {
@@ -15,7 +11,7 @@
     },
     {
       "name": "Sangmin Lee",
-      "email": "poo@poo.com"
+      "email": "sangmlee23@gmail.com"
     },
     {
       "name": "Ming Lei",
@@ -27,7 +23,8 @@
     }
   ],
   "dependencies": {
-    "angular": "^1.4.1"
+    "angular": "^1.4.1",
+    "express": "^4.13.0"
   },
   "repository": {
     "type": "git",
