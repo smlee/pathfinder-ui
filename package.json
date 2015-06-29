@@ -1,46 +1,42 @@
 {
-    "name": "pathfinder-ui",
-    "version": "0.1.11112",
-    "private": false,
-    "preferGlobal": false,
-    "scripts": {
-        "start": "node ./bin/www",
-        "startmon": "nodemon ./bin/www"
+  "name": "pathfinder-ui",
+  "version": "0.1.11112",
+  "private": false,
+  "preferGlobal": false,
+  "author": "Cat, Sang, Ming, Tyler",
+  "contributors": [
+    {
+      "name": "Cat Lau",
+      "email": "foo@foo.com"
     },
-    "author": "Cat, Sang, Ming, Tyler",
-    "contributors": [
-        {
-            "name": "Cat Lau",
-            "email": "foo@foo.com"
-        },
-        {
-            "name": "Sangmin Lee",
-            "email": "poo@poo.com"
-        },
-        {
-            "name": "Ming Lei",
-            "email": "doop@doop.com"
-        },
-        {
-            "name": "Tyler (Ler) Perwarski",
-            "email": "loop@loop.com"
-        }
-    ],
-    "dependencies": {
-        "angular": "^1.4.1"
+    {
+      "name": "Sangmin Lee",
+      "email": "poo@poo.com"
     },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/smlee/pathfinder-ui"
+    {
+      "name": "Ming Lei",
+      "email": "doop@doop.com"
     },
-    "bugs": {
-        "url": "https://github.com/smlee/pathfinder-ui/issues"
-    },
-    "keywords": [
-        "router",
-        "path",
-        "postman"
-    ],
-    "analyze": true,
-    "license": "MIT"
+    {
+      "name": "Tyler (Ler) Perwarski",
+      "email": "loop@loop.com"
+    }
+  ],
+  "dependencies": {
+    "angular": "^1.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smlee/pathfinder-ui"
+  },
+  "bugs": {
+    "url": "https://github.com/smlee/pathfinder-ui/issues"
+  },
+  "keywords": [
+    "router",
+    "path",
+    "postman"
+  ],
+  "analyze": true,
+  "license": "MIT"
 }
