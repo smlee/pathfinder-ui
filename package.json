@@ -3,10 +3,6 @@
   "version": "0.1.11112",
   "private": false,
   "preferGlobal": false,
-  "scripts": {
-    "start": "node ./bin/www",
-    "startmon": "nodemon ./bin/www"
-  },
   "author": "Cat, Sang, Ming, Tyler",
   "contributors": [
     {
