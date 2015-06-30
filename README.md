@@ -1,7 +1,10 @@
 Pathfinder-UI
+
 =========
 
-A library that allows developers to visually test their routes. 
+THIS IS IN ALPHA STAGE. NOT YET FULLY FUNCTIONAL
+
+A library that allows developers to visually test their routes.
 
 
 TEST TEST TEST TEST
