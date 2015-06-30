@@ -1,3 +1,6 @@
-#body {
-	background-color: pink;
+#visual {
+	width: 70%;
+	height:100%;
+	border-style: solid;
+	border-width: 1px;
 }
