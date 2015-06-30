@@ -1,0 +1,208 @@
+
+{
+    "name": "/",
+    "children":[
+{
+"name": "/session",
+"method": "get"
+},
+{
+"name": "/logout",
+"method": "get"
+},
+{
+"name": "/login",
+"method": "post"
+},
+{
+"name": "/auth/facebook",
+"method": "get"
+},
+{
+"name": "/auth/facebook/callback",
+"method": "get"
+},
+{
+"name": "/api",
+"children": [
+    {
+        "name": "search",
+        "children": [
+            {
+                "name": "api/search/:searchTerm",
+                "method": "get"
+            }
+        ]
+    },
+
+    {
+        "name": "products",
+        "children": [
+            {
+            "name": "api/products/",
+            "method": "get"
+            },
+            {
+            "name": "api/products/:itemId",
+            "method": "get"
+            },
+            {
+            "name": "api/products/:itemId/reviews/",
+            "method": "get"
+            },
+            {
+            "name": "api/products/:itemId/reviews",
+            "method": "post"
+            },
+            {
+            "name": "api/products/:itemId/inventoryLog",
+            "method": "get"
+            }
+        ]
+    },
+
+    {
+        "name": "cart",
+        "children": [
+            {
+                "name": "api/cart/",
+                "method": "get"
+            },
+            {
+                "name": "api/cart/:itemId",
+                "method": "put"
+            },
+            {
+                "name": "api/cart/:itemId",
+                "method": "delete"
+            }
+        ]
+    },
+
+    {   
+        "name": "userCreation",
+        "children": [
+            {
+                "name": "api/userCreation/",
+                "method": "post"
+            }
+        ]
+    },
+
+    {
+        "name": "checkout",
+        "children": [
+            {
+            "name": "api/checkout/",
+            "method": "post"
+            }
+        ]
+    },
+
+    {
+        "name": "promo",
+        "children": [
+            {
+            "name": "api/promo/",
+            "method": "get"
+            },
+
+            {
+            "name": "api/promo/:code",
+            "method": "get"
+            },
+
+            {
+            "name": "api/promo/",
+            "method": "post"
+            },
+
+            {
+            "name": "api/promo/",
+            "method": "put"
+            },
+
+            {
+            "name": "api/promo/:code",
+            "method": "delete"
+            }
+        ]
+    },
+
+    {
+        "name": "account",
+        "children": [
+            {
+            "name": "api/account/orderHistory",
+            "method": "get"
+            }
+        ]
+    },
+
+    {
+        "name": "admin",
+        "children": [
+            {
+            "name": "api/admin/products",
+            "method": "get"
+            },
+            {
+            "name": "api/admin/products",
+            "method": "post"
+            },
+            {
+            "name": "api/admin/productsInventory",
+            "method": "post"
+            },
+            {
+            "name": "api/admin/editProduct/:itemId",
+            "method": "get"
+            },
+            {
+            "name": "api/admin/orders",
+            "method": "get"
+            },
+            {
+            "name": "api/admin/orders/:orderId",
+            "method": "get"
+            },
+            {
+            "name": "api/admin/allUsers",
+            "method": "get"
+            },
+            {
+            "name": "api/admin/orders/:orderId/edit",
+            "method": "get"
+            },
+            {
+            "name": "api/admin/orders/:orderId/edit",
+            "method": "put"
+            },
+            {
+            "name": "api/admin/makeAdmin/:userEmail",
+            "method": "put"
+            },
+            {
+            "name": "api/admin/deleteUser/:userId",
+            "method": "delete"
+            },
+            {
+            "name": "api/admin/setUserResetStatus/:userId",
+            "method": "put"
+            },
+            {
+            "name": "api/admin/resetPassword/:userId",
+            "method": "put"
+            }
+        ]
+    }
+]
+},
+
+{
+"name": "/*",
+"method": "get"
+}
+]
+
+}
