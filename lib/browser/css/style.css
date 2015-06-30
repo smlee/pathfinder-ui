@@ -1,41 +1,79 @@
-/*body {
-	background-color: pink;
-}*/
+
+* {
+	box-sizing: border-box;
+}
+
 .node {
-    cursor: pointer;
-  }
+   cursor: pointer;
+}
 
 .overlay{
-  background-color:#EEE;
+	background-color:#EEE;
 }
 
 .node circle {
-fill: #fff;
-stroke: steelblue;
-stroke-width: 1.5px;
+	fill: #fff;
+	stroke: steelblue;
+	stroke-width: 1.5px;
+}
+
+svg {
+	width: 100%;
+	height: 1000px;
 }
 
 .node text {
-font-size:10px; 
-font-family:sans-serif;
+	font-size:10px; 
+	font-family:sans-serif;
 }
 
 .link {
-fill: none;
-stroke: #ccc;
-stroke-width: 1.5px;
+	fill: none;
+	stroke: #ccc;
+	stroke-width: 1.5px;
 }
 
 .templink {
-fill: none;
-stroke: red;
-stroke-width: 3px;
+	fill: none;
+	stroke: red;
+	stroke-width: 3px;
 }
 
 .ghostCircle.show{
-  display:block;
+	display:block;
 }
 
 .ghostCircle, .activeDrag .ghostCircle{
-   display: none;
+ 	display: none;
+}
+
+.visual {
+	width: 70%;
+	height:100%;
+	border-style: solid;
+	border-width: 1px;
+	border-color: red;
+	display: inline-block;
+}
+
+.right-bar {
+	width: 30%;
+	height: 100%;
+	float:right;
+	border-style: solid;
+	border-width: 1px;
+	border-color: green;
+	display:inline-block;
+}
+
+.tab-btns {
+	border-style: solid;
+	border-width: 1px;
+	border-color: purple;
+}
+
+.tab {
+	border-style: solid;
+	border-width: 1px;
+	border-color: red;
 }

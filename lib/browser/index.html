@@ -1,19 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-    <link rel="stylesheet" href="css/style.css" />
+	<head lang="en">
+	    <meta charset="UTF-8">
+	    <title></title>
+	    <link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body  ng-app='pathfinderApp' ng-controller='MainController'>
+		<div>
+			<div class="visual">
+				<p>D3.js visuals go here.</p>
+				<div id="tree-container"></div>
+			</div>
 
-</head>
-<body>
-<h1>YOUR EXPRESS PATHFINDER VISUALIZATION</h1>
-<div id="tree-container"></div>
+			<div class="right-bar">
+				<!-- This is the container div for the entire right bar -->
 
-<script src="angular.js"></script>
-<script src="js/app.js"></script>
-<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="js/routeTree.js"></script>
-</body>
+				<div class="tab-btns">
+					<p>Tab buttons go here.<p>
+				</div>
+
+				<div ui-view name="tab">
+					<button type="button" ng-click="sendReq()">Send Req</button>
+					<p>contents of the tab goes here.</p>
+				</div>
+
+			</div>
+		</div>
+		<script src="angular/angular.js"></script>
+		<script src="angular-ui-router/release/angular-ui-router.js"></script>
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/factories/RequestFactory.js"></script>
+		<script src="js/MainController.js"></script>
+		<script src="js/routeTree.js"></script>
+	</body>
+
 </html>
