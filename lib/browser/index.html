@@ -7,29 +7,32 @@
 	</head>
 	<body  ng-app='pathfinderApp' ng-controller='MainController'>
 		<div>
+
 			<div class="visual">
 				<p>D3.js visuals go here.</p>
 			</div>
 
 			<div class="right-bar">
-				<!-- This is the container div for the entire right bar -->
 
-				<div class="tab-btns">
-					<p>Tab buttons go here.<p>
+				<div class="tab-btns" ng-controller='TabBtnsController'>
+					<div ng-repeat='tabBtn in tabs' class='tab-btn' ng-click='tabSelect(tabBtn)'>{{tabBtn}}</div>
 				</div>
 
-				<div ui-view name="tab">
+				<div ui-view>
 					<button type="button" ng-click="sendReq()">Send Req</button>
 					<p>contents of the tab goes here.</p>
 				</div>
-
 			</div>
+
 		</div>
 		<script src="angular/angular.js"></script>
 		<script src="angular-ui-router/release/angular-ui-router.js"></script>
 		<script src="js/app.js"></script>
 		<script src="js/factories/RequestFactory.js"></script>
-		<script src="js/MainController.js"></script>
+		<script src="js/controllers/MainController.js"></script>
+		<script src="js/controllers/TabBtnsController.js"></script>
+
+		<script src="js/states/tab-state.js"></script>
 	</body>
 
 </html>

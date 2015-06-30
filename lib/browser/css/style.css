@@ -27,6 +27,15 @@
 	border-color: purple;
 }
 
+.tab-btns .tab-btn {
+	display:inline-block;
+	border-style: solid;
+	border-color: orange;
+	flex: 1;
+	-webkit-flex: 1;
+	-ms-flex: 1;
+}
+
 .tab {
 	border-style: solid;
 	border-width: 1px;
