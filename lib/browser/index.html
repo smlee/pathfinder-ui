@@ -5,33 +5,30 @@
     <title></title>
     <link rel="stylesheet" href="css/style.css" />
 		<script src="angular/angular.js"></script>
-		<script src="angular/angular-ui-router/release/angular-ui-router.js"></script>
+		<script src="angular-ui-router/release/angular-ui-router.js"></script>
 
 </head>
 <body ng-app="pathfinderApp">
-
-	<div class="visual">
-		D3.js visuals go here.
-	</div>
-
-	<div class="left-bar">
-		This is the container div for the entire left bar
-
-		<div class="tab-btns">
-			Tab buttons go here.
+	<div>
+		
+		<div class="visual">
+			<p>D3.js visuals go here.</p>
 		</div>
 
-		<div ui-view name="tab">
-			contents of the tab goes here.
-		</div>
+		<div class="right-bar">
+			<!-- This is the container div for the entire right bar -->
 
+			<div class="tab-btns">
+				<p>Tab buttons go here.<p>
+			</div>
+
+			<div ui-view name="tab">
+				<p>contents of the tab goes here.</p>
+			</div>
+
+		</div>
 	</div>
 
-
-
-
-
-<h1>HELLO!</h1>
 <script src="js/app.js"></script>
 </body>
 </html>
