@@ -1,7 +1,7 @@
-
+/*
 * {
 	box-sizing: border-box;
-}
+}*/
 
 .node {
    cursor: pointer;
@@ -47,7 +47,7 @@ svg {
  	display: none;
 }
 
-.visual {
+/*.visual {
 	width: 70%;
 	height:100%;
 	border-style: solid;
@@ -72,8 +72,13 @@ svg {
 	border-color: purple;
 }
 
+.tab-btns .tab-btn {
+	border-style: solid;
+	border-color: orange;
+}
+
 .tab {
 	border-style: solid;
 	border-width: 1px;
 	border-color: red;
-}
+}*/

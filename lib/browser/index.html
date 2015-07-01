@@ -3,37 +3,68 @@
 	<head lang="en">
 	    <meta charset="UTF-8">
 	    <title></title>
-	    <link rel="stylesheet" href="css/style.css" />
+	    <link rel="stylesheet" href="angular-material/angular-material.css">
+	    <link rel="stylesheet" href="css/style.css"/>
 	</head>
 	<body  ng-app='pathfinderApp' ng-controller='MainController'>
-		<div>
-			<div class="visual">
-				<p>D3.js visuals go here.</p>
-				<div id="tree-container"></div>
-			</div>
 
-			<div class="right-bar">
-				<!-- This is the container div for the entire right bar -->
+	<md-content class='md-padding'>
+		<div layout='row'>
 
-				<div class="tab-btns">
-					<p>Tab buttons go here.<p>
+			<!-- D3.JS VISUAL HERE -->
+
+				<div class="visual" flex='66'>
+					<p>D3.js visuals go here.</p>
+					<div id="tree-container"></div>
 				</div>
 
-				<div ui-view name="tab">
-					<button type="button" ng-click="sendReq()">Send Req</button>
-					<p>contents of the tab goes here.</p>
-				</div>
+			<!-- RIGHT-HAND COMMAND BAR HERE -->
 
-			</div>
+				<div class="right-bar" flex='33' ng-controller='TabBtnsController'>
+					<!-- class='tab-btn' -->
+
+							<md-content>
+					<md-tabs md-border-bottom md-dynamic-height>
+
+						<md-tab ng-repeat='tab in tabs' label='{{tab.name}}' class='md-primary'>
+						<!-- This is the inside of the tab. work on the directives instead -->
+
+							<md-button class='md-raised md-primary'>fdsfds</md-button>
+
+								<tab1 ng-if="tab.directive === 'tab1'"></tab1>
+								<tab2 ng-if="tab.directive === 'tab2'"></tab2>
+								<tab3 ng-if="tab.directive === 'tab3'"></tab3>
+								<tab4 ng-if="tab.directive === 'tab4'"></tab4>
+
+
+													
+						</md-tab>
+					</md-tabs>
+							</md-content>
+				</div>
 		</div>
+	</md-content>
+
+		<!-- Angular Libraries -->
 		<script src="angular/angular.js"></script>
 		<script src="angular-ui-router/release/angular-ui-router.js"></script>
 		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<script src="angular-animate/angular-animate.min.js"></script>
+		<script src="angular-aria/angular-aria.min.js"></script>
+		<script src="angular-material/angular-material.min.js"></script>
+
+		<!-- Main Angular App -->
 		<script src="js/app.js"></script>
+
+		<!-- Factories -->
 		<script src="js/factories/RequestFactory.js"></script>
-		<script src="js/MainController.js"></script>
+		<script src="js/controllers/MainController.js"></script>
+		<script src="js/controllers/TabBtnsController.js"></script>
 		<script src="js/routeTree.js"></script>
+
+		<!-- Directives -->
+		<script src="js/directives/tab-directives.js"></script>
 	</body>
 
 </html>
