@@ -13,7 +13,7 @@
 4 verbose stack     at evalmachine.<anonymous>:334:14
 4 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:102:5
 4 verbose stack     at FSReqWrap.oncomplete (evalmachine.<anonymous>:95:15)
-5 verbose cwd /Users/Cat/Fullstack/pathfinder-ui
+5 verbose cwd /Users/Cat/Fullstack/stackstore/node_modules/pathfinder-ui
 6 error Darwin 14.3.0
 7 error argv "node" "/usr/local/bin/npm" "start"
 8 error node v0.12.2
