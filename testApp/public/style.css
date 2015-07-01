@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box; }
+
+fullstack-logo {
+  display: block; }
+  fullstack-logo img {
+    display: block;
+    width: 100%; }
+
+navbar {
+  display: block;
+  background: #a1a1a1; }
+  navbar fullstack-logo {
+    padding-top: 10px;
+    margin-right: 20px;
+    width: 30px; }
+  navbar a {
+    color: white; }
+    navbar a:hover {
+      color: white; }
+  navbar .nav > li > a {
+    cursor: pointer; }
+    navbar .nav > li > a.active {
+      color: #f30046; }
+    navbar .nav > li > a:hover {
+      transition: color 0.2s; }
+    navbar .nav > li > a:focus {
+      color: #f30046;
+      background: transparent; }
+  navbar .login-button {
+    float: right;
+    margin-top: 8px; }
+  navbar .welcome {
+    float: right;
+    margin-top: 12px; }
+    navbar .welcome span {
+      color: white; }
+    navbar .welcome a {
+      color: #f30046;
+      cursor: pointer; }
+
+#home fullstack-logo {
+  padding-top: 30px;
+  width: 150px;
+  margin: 0 auto; }
+#home h1 {
+  margin-top: 40px;
+  text-align: center; }
+
+#about {
+  padding: 50px 100px; }
+  #about p {
+    width: 400px;
+    margin: 0 auto;
+    text-align: justify;
+    font-size: 22px;
+    font-weight: 300;
+    float: left; }
+  #about .carousel {
+    float: right;
+    width: 600px;
+    overflow: hidden;
+    margin: 0 auto; }
+    #about .carousel .carousel-control {
+      background: none; }
+    #about .carousel .carousel-indicators {
+      display: none; }
+    #about .carousel img {
+      width: 100%;
+      height: 500px;
+      display: block;
+      margin: 0 auto; }
+
+tutorial-section {
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+  padding: 20px 0 60px 0; }
+  tutorial-section > h1 {
+    margin: 20px 0 40px 0;
+    text-align: center;
+    font-weight: bold; }
+
+tutorial-video {
+  display: block;
+  width: 600px;
+  margin: 0 auto; }
+  tutorial-video h1 {
+    font-weight: 300;
+    font-size: 24px;
+    margin-bottom: 15px; }
+  tutorial-video iframe {
+    width: 600px;
+    height: 400px; }
+
+tutorial-section-menu {
+  display: block; }
+  tutorial-section-menu:after {
+    content: "";
+    display: table;
+    clear: both; }
+  tutorial-section-menu ul {
+    margin-left: 23px;
+    list-style-type: none;
+    font-weight: 300; }
+    tutorial-section-menu ul li {
+      float: left;
+      margin-right: 40px;
+      padding: 10px;
+      cursor: pointer; }
+      tutorial-section-menu ul li:hover {
+        background: #f3f3f3; }
+
+#login-form {
+  width: 60%;
+  margin: 0 auto; }
