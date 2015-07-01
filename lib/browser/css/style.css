@@ -47,7 +47,7 @@ svg {
  	display: none;
 }
 
-/*.visual {
+.visual {
 	width: 70%;
 	height:100%;
 	border-style: solid;
@@ -55,7 +55,7 @@ svg {
 	border-color: red;
 	display: inline-block;
 }
-
+/*
 .right-bar {
 	width: 30%;
 	height: 100%;
