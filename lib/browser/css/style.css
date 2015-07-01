@@ -28,12 +28,12 @@
 }
 
 .tab-btns .tab-btn {
-	display:inline-block;
 	border-style: solid;
 	border-color: orange;
-	flex: 1;
+/*	flex: 1;
+	display:inline-block;
 	-webkit-flex: 1;
-	-ms-flex: 1;
+	-ms-flex: 1;*/
 }
 
 .tab {
