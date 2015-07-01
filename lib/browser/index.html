@@ -22,11 +22,11 @@
 				<div class="right-bar" flex='33' ng-controller='TabBtnsController'>
 					<!-- class='tab-btn' -->
 
-					<md-tabs md-selected="selectedIndex" md-border-bottom md-dynamic-height>
+							<md-content>
+					<md-tabs md-border-bottom md-dynamic-height>
 
 						<md-tab ng-repeat='tab in tabs' label='{{tab.name}}' class='md-primary'>
 						<!-- This is the inside of the tab. work on the directives instead -->
-							<md-content class="md-padding">
 
 							<md-button class='md-raised md-primary'>fdsfds</md-button>
 
@@ -35,11 +35,11 @@
 								<tab3 ng-if="tab.directive === 'tab3'"></tab3>
 								<tab4 ng-if="tab.directive === 'tab4'"></tab4>
 
-							</md-content>
 
 													
 						</md-tab>
 					</md-tabs>
+							</md-content>
 				</div>
 		</div>
 	</md-content>
