@@ -15,7 +15,18 @@ TEST TEST TEST TEST
 
 ## Usage
 
-  Blah blah blah blah ipsum lorsomething dolor darmok and jalad at tanagra
+	```javascript
+	var pfUI = require('pathfinder-ui')
+
+	//Place this line before your routes/routers/middlewares.
+  app.use('yourCustomPath', pfUI.router)
+
+
+  //Place this line after all of your routes/routers/middlewares.
+  pfUI(app);
+  ```
+
+ 
 
 ## Tests
 
