@@ -1,0 +1,19 @@
+<div flex layout="row" layout-align="center center">
+	<div class="md-whiteframe-z2">
+		<md-content class="md-padding">
+			<form name="requestForm" data-ng-submit="sendReq()">
+				<h4> Url: {{ getUrl() }} </h4>
+				<md-input-container ng-repeat="(key, value) in currNode.params">
+					<label>{{ key }}</label>
+					<input type="text" data-ng-model="currNode.params[key]" required>
+				</md-input-container>
+				<h4> Method: {{ request.method }}</h4>
+				<md-input-container>
+					<label> Data: </label>
+					<textarea ng-model="request.data" columns="1"></textarea>
+				</md-input-container>
+				<md-button type="submit" class="md-primary" ng-class="{'md-raised md-hue-1':(requestForm.$valid) }">Send Request</md-button>
+			</form>
+		</md-content>
+	</div>
+</div>
