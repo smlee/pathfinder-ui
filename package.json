@@ -23,10 +23,6 @@
     }
   ],
   "dependencies": {
-    "angular": "^1.4.1",
-    "angular-animate": "^1.4.1",
-    "angular-aria": "^1.4.1",
-    "angular-material": "^0.10.0",
     "angular-ui-router": "^0.2.15",
     "express": "^4.13.0"
   },
