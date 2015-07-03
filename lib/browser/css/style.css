@@ -17,9 +17,9 @@
 	stroke-width: 1.5px;
 }
 
-svg {
+.visual svg {
 	width: 100%;
-	height: 1000px;
+	height: 100vh;
 }
 
 .node text {
