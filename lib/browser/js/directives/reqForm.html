@@ -1,5 +1,5 @@
 <div flex layout="row" layout-align="center center">
-	<div class="md-whiteframe-z2">
+	<div class="reqForm-container md-whiteframe-z2">
 		<md-content class="md-padding">
 			<form name="requestForm" data-ng-submit="sendReq()">
 				<h4> Url: {{ getUrl() }} </h4>
@@ -7,7 +7,19 @@
 					<label>{{ key }}</label>
 					<input type="text" data-ng-model="currNode.params[key]" required>
 				</md-input-container>
-				<h4> Method: {{ request.method }}</h4>
+				<h4> Method: {{ currNode.method }}</h4>
+				<h4> URL Params: </h4>
+				<button type="button" ng-click="addUrlParam()">Add Param</button>
+				<div ng-repeat="urlParam in urlParams" layout="row">
+					<md-input-container flex="50">
+						<label> Param Key: </label>
+						<input type="text" data-ng-model="urlParam.key">
+					</md-input-container>
+					<md-input-container flex="50" >
+						<label> Param Val: </label>
+						<input type="text" data-ng-model="urlParam.val">
+					</md-input-container>
+				</div>
 				<md-input-container>
 					<label> Data: </label>
 					<textarea ng-model="request.data" columns="1"></textarea>
