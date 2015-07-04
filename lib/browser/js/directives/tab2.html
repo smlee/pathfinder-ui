@@ -1,6 +1,13 @@
 <pre>
-	HELLO, WELCOME TO TAB 2
-
-	content of tab 2 stuff here.
-
+	History
 </pre>
+
+<md-list>
+  <md-list-item class="md-2-line" ng-repeat="item in todos">
+    <md-checkbox ng-model="item.done"></md-checkbox>
+    <div class="md-list-item-text">
+      <h3>{{item.title}}</h3>
+      <p>{{item.description}}</p>
+    </div>
+  </md-list-item>
+</md-list>
