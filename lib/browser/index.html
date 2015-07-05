@@ -22,15 +22,19 @@
 					<!-- class='tab-btn' -->
 
 				<md-content>
-					<md-tabs md-border-bottom md-dynamic-height>
+					<md-tabs md-selected="selectedIndex" md-border-bottom md-dynamic-height>
 
-						<md-tab ng-repeat='tab in tabs' label='{{tab.name}}'>
-						<!-- This is the inside of the tab. work on the directives instead -->
-
-								<tab1 ng-if="tab.directive === 'tab1'"></tab1>
-								<tab2 ng-if="tab.directive === 'tab2'"></tab2>
-								<tab3 ng-if="tab.directive === 'tab3'"></tab3>
-								<tab4 ng-if="tab.directive === 'tab4'"></tab4>
+						<md-tab label = "Send">
+							<tab1></tab1>
+						</md-tab>
+						<md-tab label = "History">
+							<history></history>
+						</md-tab>
+						<md-tab label = "????">
+							<tab3></tab3>
+						</md-tab>
+						<md-tab label = "???">
+							<tab4></tab4>
 						</md-tab>
 					</md-tabs>
 				</md-content>
@@ -60,6 +64,7 @@
 		<script src="js/controllers/TabBtnsController.js"></script>
 		<script src="js/controllers/d3NodeController.js"></script>
 		<script src="js/factories/HistoryFactory.js"></script>
+		<script src="js/factories/DataFactory.js"></script>
 
 		<script src="js/routeTree.js"></script>
 
@@ -67,6 +72,7 @@
 		<script src="js/directives/tab-directives.js"></script>
 		<script src="js/directives/D3directive.js"></script>
 		<script src="js/directives/reqForm-directive.js"></script>
+		<script src="js/directives/history-directive.js"></script>
 
 	</body>
 
