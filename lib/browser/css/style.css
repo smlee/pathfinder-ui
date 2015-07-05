@@ -52,6 +52,10 @@
 	height:100%;
 	display: inline-block;
 }
+
+.reqForm-container {
+	width: 90%;
+}
 /*
 .right-bar {
 	width: 30%;
