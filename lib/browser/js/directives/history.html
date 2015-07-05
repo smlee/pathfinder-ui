@@ -1,0 +1,10 @@
+<md-content class="md-padding">
+	<md-list>
+	  <md-list-item class="md-2-line" ng-repeat="item in history track by $index">
+	    <div class="md-list-item-text" ng-click="select(0)">
+	      <h3>Url: {{item.url}}</h3>
+	      <p>Method: {{item.method}}</p>
+	    </div>
+	  </md-list-item>
+	</md-list>
+</md-content>
