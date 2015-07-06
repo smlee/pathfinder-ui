@@ -1,5 +1,5 @@
-<div class = 'response-container'>
-	<h4>Data: {{ data }}</h4>
-	<h4>Status: {{ status }}</h4>
-	<h4>Headers: {{ headers }}</h4>
+<div>
+	<h4>Data: {{ getResponse().data | json }}</h4>
+	<h4>Status: {{ getResponse().status | json }}</h4>
+	<h4>Headers: {{ getResponse().headers | json }}</h4>
 </div>
