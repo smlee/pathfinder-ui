@@ -10,7 +10,6 @@
 
 	<md-content class='md-padding'>
 		<div layout='row'>
-
 			<!-- D3.JS VISUAL HERE -->
 
 				<div class="visual" id="route-tree" tree-visual="">
@@ -30,19 +29,33 @@
                             <ng-md-icon icon="more_vert" style="fill: #ddd" size="20"></ng-md-icon>
                         </div><br/><br/>
                         <div class="slide-icon" shifter>
-                            <ng-md-icon ng-hide="max" icon="chevron_left" style="fill: #ddd" size="20""></ng-md-icon>
+                            <ng-md-icon ng-hide="max" icon="chevron_left" style="fill: #ddd" size="20"></ng-md-icon>
                         </div>
-
                     </div>
 
                     <!-- class='tab-btn' -->
-
 				<md-content>
 					<md-tabs md-selected="selectedIndex" md-border-bottom md-dynamic-height>
 
 						<md-tab label = "Send">
-							<tab1></tab1>
+
+							<md-tabs md-selected="selectedAuthIndex">
+								<md-tab label="Normal">
+									<tab1></tab1>
+								</md-tab>
+								<md-tab label="Basic Auth">
+									<tab1></tab1>
+								</md-tab>
+								<md-tab label="Digest Auth">
+									<tab1></tab1>
+								</md-tab>
+								<md-tab label="OAuth">
+									<tab1></tab1>
+								</md-tab>
+							</md-tabs>
+
 						</md-tab>
+
 						<md-tab label = "History">
 							<history></history>
 						</md-tab>
@@ -55,6 +68,7 @@
 					</md-tabs>
 				</md-content>
 				</div>
+
 		</div>
 	</md-content>
 
@@ -71,7 +85,6 @@
 
 		<!-- Other Libraries -->
 		<script src="http://d3js.org/d3.v3.min.js"></script>
-		<script src="js/d3.layout.js"></script>
 
 		<!-- Main Angular App -->
 		<script src="js/app.js"></script>
@@ -84,14 +97,12 @@
 		<script src="js/factories/HistoryFactory.js"></script>
 		<script src="js/factories/DataFactory.js"></script>
 
-		<script src="js/routeTree.js"></script>
-
 		<!-- Directives -->
 		<script src="js/directives/tab-directives.js"></script>
 		<script src="js/directives/D3directive.js"></script>
 		<script src="js/directives/reqForm-directive.js"></script>
 		<script src="js/directives/history-directive.js"></script>
-        <script src="js/directives/resize.js"></script>
+    <script src="js/directives/resize.js"></script>
 
 	</body>
 
