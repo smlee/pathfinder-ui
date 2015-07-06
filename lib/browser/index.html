@@ -39,7 +39,7 @@
 
 						<md-tab label = "Send">
 
-							<md-tabs md-selected="selectedAuthIndex">
+							<md-tabs md-selected="selectedAuthIndex" ng-controller='AuthTabsController'>
 								<md-tab label="Normal">
 									<tab1></tab1>
 								</md-tab>
@@ -94,6 +94,7 @@
 		<script src="js/controllers/MainController.js"></script>
 		<script src="js/controllers/TabBtnsController.js"></script>
 		<script src="js/controllers/d3NodeController.js"></script>
+		<script src="js/controllers/AuthTabsController.js"></script>
 		<script src="js/factories/HistoryFactory.js"></script>
 		<script src="js/factories/DataFactory.js"></script>
 
