@@ -2,7 +2,7 @@
 <html>
 	<head lang="en">
 	    <meta charset="UTF-8">
-	    <title></title>
+	    <title>Pathfinder-UI</title>
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.10.0/angular-material.min.css">
 	    <link rel="stylesheet" href="css/style.css"/>
 	</head>
@@ -13,24 +13,44 @@
 
 			<!-- D3.JS VISUAL HERE -->
 
-				<div class="visual" flex='66' tree-visual="">
+				<div class="visual" id="route-tree" tree-visual="">
 				</div>
 
 			<!-- RIGHT-HAND COMMAND BAR HERE -->
 
-				<div class="right-bar" flex='33' ng-controller='TabBtnsController'>
-					<!-- class='tab-btn' -->
+				<div class="right-bar slide" ng-controller='TabBtnsController'>
+                    <!--RESIZER-->
+                    <div class="resize-tab" >
+                        <div class="resize-icon"
+                             resizer="vertical"
+                             resizer-width="4"
+                             resizer-left="#route-tree"
+                             resizer-right=".right-bar"
+                             resizer-max="60">
+                            <ng-md-icon icon="more_vert" style="fill: #ddd" size="20"></ng-md-icon>
+                        </div><br/><br/>
+                        <div class="slide-icon" shifter>
+                            <ng-md-icon ng-hide="max" icon="chevron_left" style="fill: #ddd" size="20""></ng-md-icon>
+                        </div>
+
+                    </div>
+
+                    <!-- class='tab-btn' -->
 
 				<md-content>
-					<md-tabs md-border-bottom md-dynamic-height>
+					<md-tabs md-selected="selectedIndex" md-border-bottom md-dynamic-height>
 
-						<md-tab ng-repeat='tab in tabs' label='{{tab.name}}'>
-						<!-- This is the inside of the tab. work on the directives instead -->
-
-								<tab1 ng-if="tab.directive === 'tab1'"></tab1>
-								<tab2 ng-if="tab.directive === 'tab2'"></tab2>
-								<tab3 ng-if="tab.directive === 'tab3'"></tab3>
-								<tab4 ng-if="tab.directive === 'tab4'"></tab4>
+						<md-tab label = "Send">
+							<tab1></tab1>
+						</md-tab>
+						<md-tab label = "History">
+							<history></history>
+						</md-tab>
+						<md-tab label = "????">
+							<tab3></tab3>
+						</md-tab>
+						<md-tab label = "???">
+							<tab4></tab4>
 						</md-tab>
 					</md-tabs>
 				</md-content>
@@ -38,16 +58,18 @@
 		</div>
 	</md-content>
 
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+
         <!-- Angular Material Dependencies -->
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.5.0/angular-material-icons.min.js"></script>
 
         <!-- Angular Material Javascript -->
         <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.10.0/angular-material.min.js"></script>
 
 		<!-- Other Libraries -->
-		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 		<script src="http://d3js.org/d3.v3.min.js"></script>
 		<script src="js/d3.layout.js"></script>
 
@@ -59,6 +81,8 @@
 		<script src="js/controllers/MainController.js"></script>
 		<script src="js/controllers/TabBtnsController.js"></script>
 		<script src="js/controllers/d3NodeController.js"></script>
+		<script src="js/factories/HistoryFactory.js"></script>
+		<script src="js/factories/DataFactory.js"></script>
 
 		<script src="js/routeTree.js"></script>
 
@@ -66,6 +90,9 @@
 		<script src="js/directives/tab-directives.js"></script>
 		<script src="js/directives/D3directive.js"></script>
 		<script src="js/directives/reqForm-directive.js"></script>
+		<script src="js/directives/history-directive.js"></script>
+        <script src="js/directives/resize.js"></script>
+
 	</body>
 
 </html>
