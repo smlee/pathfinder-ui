@@ -1,6 +1,4 @@
-<h1>Hello</h1>
-{{ authCredentials }}
-<form name="basicAuthForm" ng-submit="switchAuthTab(0)">
+<form name="basicAuthForm" ng-submit="setBasicAuth(authCredentials)">
 	<md-input-container flex="50">
 		<label> Username: </label>
 		<input type="text" data-ng-model="authCredentials.username">

@@ -35,11 +35,12 @@
 
                     <!-- class='tab-btn' -->
 				<md-content>
+					
 					<md-tabs md-selected="selectedIndex" md-border-bottom md-dynamic-height>
 
 						<md-tab label = "Send">
-
-							<md-tabs md-selected="selectedAuthIndex" ng-controller='AuthTabsController'>
+						<div ng-controller='AuthTabsController'>
+							<md-tabs md-selected="selectedAuthIndex">
 								<md-tab label="Normal">
 									<tab1></tab1>
 								</md-tab>
@@ -47,13 +48,13 @@
 									<basic-auth-tab></basic-auth-tab>
 								</md-tab>
 								<md-tab label="Digest Auth">
-									<tab1></tab1>
+									<!-- <tab1></tab1> -->
 								</md-tab>
 								<md-tab label="OAuth">
-									<tab1></tab1>
+									<!-- <tab1></tab1> -->
 								</md-tab>
 							</md-tabs>
-
+						</div>	<!-- end of auth tabs  -->
 						</md-tab>
 
 						<md-tab label = "History">
@@ -66,6 +67,7 @@
 							<tab4></tab4>
 						</md-tab>
 					</md-tabs>
+
 				</md-content>
 				</div>
 
