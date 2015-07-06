@@ -1,0 +1,13 @@
+<h1>Hello</h1>
+{{ authCredentials }}
+<form name="basicAuthForm" ng-submit="setBasicAuth(authCredentials)">
+	<md-input-container flex="50">
+		<label> Username: </label>
+		<input type="text" data-ng-model="authCredentials.username">
+	</md-input-container>
+	<md-input-container flex="50" >
+		<label> Password: </label>
+		<input type="password" data-ng-model="authCredentials.password">
+	</md-input-container>
+	<md-button type="submit" class="md-primary" ng-class="{'md-raised md-hue-1':(requestForm.$valid) }">Refresh Headers</md-button>
+</form>
