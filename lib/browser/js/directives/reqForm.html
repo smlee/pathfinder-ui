@@ -27,6 +27,21 @@
 						<textarea ng-model="request.data" columns="1"></textarea>
 					</md-input-container>
 				</div>
+				<h4>Headers</h4>
+				<div ng-repeat="(key, value) in getHeaders()" layout="row">
+					<md-input-container flex="50">
+						<label> Key: </label>
+						<input type="text" data-ng-model="key">	
+					</md-input-container>
+					<md-input-container flex="50">
+						<label> Val: </label>
+						<input type="text" data-ng-model="getHeaders()[key]">
+					</md-input-container>
+				</div>
+				<md-input-container>
+					<label> Data: </label>
+					<textarea ng-model="request.data" columns="1"></textarea>
+				</md-input-container>
 				<md-button type="submit" class="md-primary" ng-class="{'md-raised md-hue-1':(requestForm.$valid) }" ng-click='switchTab(2)'>Send Request</md-button>
 			</form>
 		</md-content>
