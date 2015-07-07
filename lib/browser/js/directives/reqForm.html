@@ -9,7 +9,7 @@
 					<input type="text" data-ng-model="getParams()[key]" required>
 				</md-input-container>
 				<h4> Query Params: </h4>
-				<md-button type="button" class="md-primary md-raised" ng-click="addUrlParam()">Add Param</md-button>
+				<md-button type="button" class="md-primary" ng-click="addUrlParam()">Add Query Param</md-button>
 				<div ng-repeat="urlParam in getUrlParams()" layout="row">
 					<md-input-container flex="45">
 						<label> Param Key: </label>
@@ -21,10 +21,12 @@
 					</md-input-container>
 					<i class="material-icons md-dark" flex="5">highlight_off</i>
 				</div>
-				<md-input-container>
-					<label> Data: </label>
-					<textarea ng-model="request.data" columns="1"></textarea>
-				</md-input-container>
+				<div class="post-section" ng-if="getMethod() === 'post'">
+					<md-input-container>
+						<label> Data: </label>
+						<textarea ng-model="request.data" columns="1"></textarea>
+					</md-input-container>
+				</div>
 				<md-button type="submit" class="md-primary" ng-class="{'md-raised md-hue-1':(requestForm.$valid) }" ng-click='switchTab(2)'>Send Request</md-button>
 			</form>
 		</md-content>
