@@ -1,4 +1,6 @@
 <md-content class="md-padding">
+	<md-button type="button" style="float: right;" class="md-primary" ng-class="{'md-raised md-hue-1':(requestForm.$valid) }" ng-click='saveToFile()'>Save To File</md-button>
+<!-- <a href="#"><button class="md-primary" ng-click="saveToFile()">Save To File</button></a> -->
 	<md-list>
 	  <md-list-item class="md-2-line" ng-repeat="item in history track by $index">
 	    <div class="md-list-item-text" ng-click="populatePriorReq(item)">
