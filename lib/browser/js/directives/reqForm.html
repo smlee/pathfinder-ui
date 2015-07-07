@@ -8,17 +8,18 @@
 					<label>{{ key }}</label>
 					<input type="text" data-ng-model="getParams()[key]" required>
 				</md-input-container>
-				<h4> URL Params: </h4>
-				<button type="button" ng-click="addUrlParam()">Add Param</button>
+				<h4> Query Params: </h4>
+				<md-button type="button" class="md-primary md-raised" ng-click="addUrlParam()">Add Param</md-button>
 				<div ng-repeat="urlParam in getUrlParams()" layout="row">
-					<md-input-container flex="50">
+					<md-input-container flex="45">
 						<label> Param Key: </label>
 						<input type="text" data-ng-model="urlParam.key">
 					</md-input-container>
-					<md-input-container flex="50" >
+					<md-input-container flex="45" >
 						<label> Param Val: </label>
 						<input type="text" data-ng-model="urlParam.val">
 					</md-input-container>
+					<i class="material-icons md-dark" flex="5">highlight_off</i>
 				</div>
 				<md-input-container>
 					<label> Data: </label>
