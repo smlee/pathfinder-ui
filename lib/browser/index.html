@@ -7,6 +7,8 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 	    <link rel="stylesheet" href="css/style.css"/>
+
+
 	</head>
 	<body  ng-app='pathfinderApp' ng-controller='MainController'>
 
@@ -52,8 +54,8 @@
 								<md-tab label="Digest Auth">
 									<!-- <tab1></tab1> -->
 								</md-tab>
-								<md-tab label="OAuth">
-									<!-- <tab1></tab1> -->
+								<md-tab label="OAuth 2.0">
+									<o-auth-tab></o-auth-tab>
 								</md-tab>
 							</md-tabs>
 						</div>	<!-- end of auth tabs  -->
@@ -88,7 +90,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.10.0/angular-material.min.js"></script>
 
 		<!-- Other Libraries -->
-		<script src="http://d3js.org/d3.v3.js"></script>
+
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<script src="/lodash/index.js"></script>
 
 		<!-- Main Angular App -->
 		<script src="js/app.js"></script>
@@ -110,10 +114,11 @@
 		<script src="js/directives/D3directive.js"></script>
 		<script src="js/directives/reqForm-directive.js"></script>
 		<script src="js/directives/history-directive.js"></script>
+
   	<script src="js/directives/basicAuthTab.js"></script>
     <script src="js/directives/resize.js"></script>
-    <script src="js/directives/response.html"></script>
     <script src="js/directives/response.js"></script>
+    <script src="js/directives/oAuthTab.js"></script>
 
 
 

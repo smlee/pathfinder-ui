@@ -9,7 +9,7 @@
 					<input type="text" data-ng-model="getParams()[key]" required>
 				</md-input-container>
 				<h4> Query Params: </h4>
-				<md-button type="button" class="md-primary" ng-click="addUrlParam()">Add Query Param</md-button>
+				<md-button type="button" class=" md-primary" ng-click="addUrlParam()">Add Query Param</md-button>
 				<div ng-repeat="urlParam in getUrlParams()" layout="row">
 					<md-input-container flex="45">
 						<label> Param Key: </label>
@@ -22,10 +22,25 @@
 					<i class="material-icons md-dark" flex="5">highlight_off</i>
 				</div>
 				<div class="post-section" ng-if="getMethod() === 'post'">
-					<md-input-container>
-						<label> Data: </label>
-						<textarea ng-model="request.data" columns="1"></textarea>
+
+					<h4>Data </h4>
+					<md-button type="button" class="md-primary" ng-click="setDataType('form')">form data</md-button>
+					<md-button type="button" class="md-primary" ng-click="setDataType('raw')">Raw</md-button>
+					<md-input-container ng-if="dataType === 'raw'">
+						<label> Raw: </label>
+						<textarea ng-model="request.rawData" columns="1"></textarea>
 					</md-input-container>
+					<div ng-repeat="formDatum in formData" layout="row" ng-if="dataType === 'form'">
+						<md-input-container flex="45">
+							<label> Form Key: </label>
+							<input type="text" data-ng-model="formDatum.key">
+						</md-input-container>
+						<md-input-container flex="45" >
+							<label> Form Val: </label>
+							<input type="text" data-ng-model="formDatum.val">
+						</md-input-container>
+						<i class="material-icons md-dark" flex="5">highlight_off</i>
+					</div>
 				</div>
 				<h4>Headers</h4>
 				<div ng-repeat="(key, value) in getHeaders()" layout="row">
@@ -38,11 +53,7 @@
 						<input type="text" data-ng-model="getHeaders()[key]">
 					</md-input-container>
 				</div>
-				<md-input-container>
-					<label> Data: </label>
-					<textarea ng-model="request.data" columns="1"></textarea>
-				</md-input-container>
-				<md-button type="submit" class="md-primary" ng-class="{'md-raised':(requestForm.$valid) }" ng-click='switchTab(2)'>Send Request</md-button>
+				<md-button type="submit" class="md-primary" ng-class="{'md-raised md-hue-1':(requestForm.$valid) }">Send Request</md-button>
 			</form>
 		</md-content>
 	</div>

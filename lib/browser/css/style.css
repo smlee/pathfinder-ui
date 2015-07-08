@@ -124,6 +124,10 @@
 .clearfix {
     *zoom: 1;
 }
+
+#pastReq {
+    padding-top: 14px;
+}
 /*
 .right-bar {
 	width: 30%;

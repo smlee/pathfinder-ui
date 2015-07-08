@@ -24,7 +24,8 @@
   ],
   "dependencies": {
     "angular-ui-router": "^0.2.15",
-    "express": "^4.13.0"
+    "express": "^4.13.0",
+    "lodash": "^3.10.0"
   },
   "repository": {
     "type": "git",
