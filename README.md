@@ -2,16 +2,13 @@ Pathfinder-UI
 
 =========
 
-THIS IS IN ALPHA STAGE. NOT YET FULLY FUNCTIONAL
-
-A library that allows developers to visually test their routes.
-
-
-TEST TEST TEST TEST
+Pathfinder-UI is a tool that allows you to visualize and test the routes in an express application.
 
 ## Installation
 
+```bash
   npm install pathfinder-ui --save
+ ```
 
 ## Usage
 
