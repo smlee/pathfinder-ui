@@ -14,25 +14,24 @@ Pathfinder-UI is a tool that allows you to visualize and test the routes in an e
 ```js
 var pfUI = require('pathfinder-ui')
 ```
+This line attaches the Pathfinder interface to your express app.
+
 Place this line before your routes/routers/middlewares
 ```js
 app.use('yourCustomPath', pfUI.router)
 ```
+
 Place this line after all of your routes/routers/middlewares.
 ```js
 pfUI(app);
 ```
+You access the interface by going to localhost:PORT/yourCustomPath
 
  
 
 ## Tests
 
-  Blah blah blah blah ipsum lorsomething dolor darmok and jalad at tanagra
-
 ## Contributing
-
-Blah blah blah blah ipsum lorsomething dolor darmok and jalad at tanagra.
 
 ## Release History
 
-* 0.0.0 some version title stuff
