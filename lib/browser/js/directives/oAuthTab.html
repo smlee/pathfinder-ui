@@ -1,0 +1,27 @@
+<form name="oAuthForm" ng-submit="setOAuth(oAuthCreds)">
+
+	<h3>Callback URL: {{ callBackUrl }}</h3>
+	<md-input-container>
+		<label>Authorization URL: </label>
+		<input type="text" data-ng-model="oAuthCreds.authUrl">
+	</md-input-container>
+	<md-input-container>
+		<label> Access Token: </label>
+		<input type="text" data-ng-model="oAuthCreds.accessTokenUrl">
+	</md-input-container>
+	<md-input-container>
+		<label> Client ID: </label>
+		<input type="text" data-ng-model="oAuthCreds.clientId">
+	</md-input-container>
+	<md-input-container>
+		<label> Client Secret: </label>
+		<input type="text" data-ng-model="oAuthCreds.clientSecret">
+	</md-input-container>
+	<md-input-container>
+		<label> Scope (Optional): </label>
+		<input type="text" data-ng-model="oAuthCreds.scope">
+	</md-input-container>
+
+	<md-button type="submit" class="md-primary" ng-class="{'md-raised md-hue-1':(requestForm.$valid) }">Get access token</md-button>
+
+</form>
