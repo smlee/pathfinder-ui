@@ -1,10 +1,16 @@
 <md-content class="md-padding">
-	<md-list>
-	  <md-list-item class="md-2-line" ng-repeat="item in history track by $index">
-	    <div class="md-list-item-text" ng-click="populatePriorReq(item)">
-	      <h3>Url: {{ item.url }}</h3>
-	      <p>Method: {{ item.method | uppercase }}</p>
-	    </div>
-	  </md-list-item>
-	</md-list>
+	<div>
+		<md-button type="button" class="md-primary" ng-class="{'md-raised md-hue-1':(requestForm.$valid) }" ng-click='saveToFile()'>Save To File</md-button>
+	</div>
+	<div>
+		<md-list>
+		  <md-list-item class="md-2-line" ng-repeat="item in history track by $index">
+		    <div class="md-list-item-text" id="pastReq" ng-click="populatePriorReq(item)">
+		      <h3>Url: {{ item.url }}</h3>
+		      <p>Method: {{ item.method | uppercase }}</p>
+		    </div>
+		    <md-checkbox ng-click="addToSaveList(item)" ng-checked="saveList.indexOf(item) > -1"></md-checkbox>
+		  </md-list-item>
+		</md-list
+	</div>
 </md-content>
