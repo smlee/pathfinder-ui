@@ -11,17 +11,17 @@ Pathfinder-UI is a tool that allows you to visualize and test the routes in an e
  ```
 
 ## Usage
-
-	```javascript
-	var pfUI = require('pathfinder-ui')
-
-	//Place this line before your routes/routers/middlewares.
-  app.use('yourCustomPath', pfUI.router)
-
-
-  //Place this line after all of your routes/routers/middlewares.
-  pfUI(app);
-  ```
+```js
+var pfUI = require('pathfinder-ui')
+```
+Place this line before your routes/routers/middlewares
+```js
+app.use('yourCustomPath', pfUI.router)
+```
+Place this line after all of your routes/routers/middlewares.
+```js
+pfUI(app);
+```
 
  
 
