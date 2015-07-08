@@ -27,8 +27,6 @@ pfUI(app);
 ```
 You access the interface by going to localhost:PORT/yourCustomPath
 
- 
-
 ## Tests
 
 ## Contributing

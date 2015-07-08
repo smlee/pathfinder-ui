@@ -13,7 +13,7 @@
 				<div ng-repeat="urlParam in getUrlParams()" layout="row">
 					<md-input-container flex="45">
 						<label> Param Key: </label>
-						<input type="text" data-ng-model="formDatum.key">
+						<input type="text" data-ng-model="urlParam.key">
 					</md-input-container>
 					<md-input-container flex="45" >
 						<label> Param Val: </label>
@@ -53,7 +53,7 @@
 						<input type="text" data-ng-model="getHeaders()[key]">
 					</md-input-container>
 				</div>
-				<md-button type="submit" class="md-primary" ng-class="{'md-raised md-hue-1':(requestForm.$valid) }" ng-click='switchTab(2)'>Send Request</md-button>
+				<md-button type="submit" class="md-primary" ng-class="{'md-raised md-hue-1':(requestForm.$valid) }">Send Request</md-button>
 			</form>
 		</md-content>
 	</div>
