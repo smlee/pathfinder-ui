@@ -1,7 +1,7 @@
 <div flex layout="row" layout-align="center center">
     <pre>
         <h4>Status: {{ getResponse().status | json }}</h4>
-        <h4>Headers: {{ getResponse().headers() | json }}</h4>
-        <h4>Data: {{ getResponse().data | json }}</h4>
+        <h4>Headers:<br> {{ getResponse().headers() | json }}</h4>
+        <h4><pre>Response:<br> {{ isJson ? ( getResponse().data | json) : getResponse().data }}</pre></h4>
     </pre>
 </div>
