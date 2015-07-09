@@ -31,6 +31,7 @@
 						<textarea ng-model="request.rawData" columns="1"></textarea>
 					</md-input-container>
 					<div ng-repeat="formDatum in formData" layout="row" ng-if="dataType === 'form'">
+
 						<md-input-container flex="45">
 							<label> Form Key: </label>
 							<input type="text" data-ng-model="formDatum.key">
@@ -40,7 +41,21 @@
 							<input type="text" data-ng-model="formDatum.val">
 						</md-input-container>
 						<i class="material-icons md-dark" flex="5">highlight_off</i>
+						<md-select ng-model="dataFormat" placeholder="Text">
+							<md-option ng-value="format" ng-repeat="format in fileFormats">{{ format }}</md-option>
+						</md-select>
 					</div>
+					<!--   	<md-button type="button" class="md-primary" ng-click="setContentType()">Upload Image</md-button> -->
+						<div name="fileUpload">
+				        	<input type='file' name='fileUploaded'>
+				        	<input value="Upload Image" name="submit" ng-click="setContentType()">
+					    </div>
+<!-- 						<form name="fileUpload" ng-if="dataFormat==='File'" method='post' action='/api/checkout/form' enctype="multipart/form-data">
+				        	<input type='file' name='fileUploaded' accept="image/*">
+				        	<input value="Upload Image" name="submit" ng-click="setContentType()">
+					    </form> -->
+					
+
 				</div>
 				<h4>Headers</h4>
 				<div ng-repeat="(key, value) in getHeaders()" layout="row">
