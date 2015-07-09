@@ -11,15 +11,17 @@
 				<h4> Query Params: </h4>
 				<md-button type="button" class=" md-primary" ng-click="addUrlParam()">Add Query Param</md-button>
 				<div ng-repeat="urlParam in getUrlParams()" layout="row">
-					<md-input-container flex="45">
+					<md-input-container flex="40">
 						<label> Param Key: </label>
 						<input type="text" data-ng-model="urlParam.key">
 					</md-input-container>
-					<md-input-container flex="45" >
+					<md-input-container flex="40" >
 						<label> Param Val: </label>
 						<input type="text" data-ng-model="urlParam.val">
 					</md-input-container>
-					<i class="material-icons md-dark" flex="5">highlight_off</i>
+					<md-button type="button" class="md-icon-button" ng-click="removeUrlParam($index)" aria-label="Custom Icon Button">
+							<i class="material-icons md-dark" flex="20">highlight_off</i>
+					</md-button>
 				</div>
 				<div class="post-section" ng-if="getMethod() === 'post'">
 
@@ -32,15 +34,17 @@
 					</md-input-container>
 					<md-button type="button" class=" md-primary" ng-click="addFormDataItem()">Add Form Data Item</md-button ng-if="dataType === 'form'">
 					<div ng-repeat="formDatum in data.formData" layout="row" ng-if="dataType === 'form'">
-						<md-input-container flex="45">
+						<md-input-container flex="40">
 							<label> Form Key: </label>
 							<input type="text" data-ng-model="formDatum.key">
 						</md-input-container>
-						<md-input-container flex="45" >
+						<md-input-container flex="40" >
 							<label> Form Val: </label>
 							<input type="text" data-ng-model="formDatum.val">
 						</md-input-container>
-						<i class="material-icons md-dark" flex="5">highlight_off</i>
+						<md-button type="button" class="md-icon-button" ng-click="removeFormItem($index)" aria-label="Custom Icon Button">
+							<i class="material-icons md-dark" flex="20">highlight_off</i>
+						</md-button>
 					</div>
 				</div>
 				<h4>Headers</h4>
