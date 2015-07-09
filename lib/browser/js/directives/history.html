@@ -2,6 +2,22 @@
 	<div>
 		<md-button type="button" class="md-primary" ng-class="{'md-raised md-hue-1':(requestForm.$valid) }" ng-click='saveToFile()'>Save To File</md-button>
 	</div>
+
+	<div>
+      <h2>File Upload with Material:</h2>
+
+      <md-button>
+        <label for="file-input">Select</label>  
+      </md-button>
+      <input id="file-input" type="file">
+    </div>
+
+    
+	<form name="fileUpload">
+    	<input type='file' name='fileUploaded' ng-model="filePath">
+    	<input name="submit">
+	</form>
+
 	<div>
 		<md-list>
 		  <md-list-item class="md-2-line" ng-repeat="item in history track by $index">
