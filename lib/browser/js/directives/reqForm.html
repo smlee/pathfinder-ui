@@ -28,10 +28,10 @@
 					<md-button type="button" class="md-primary" ng-click="setDataType('raw')">Raw</md-button>
 					<md-input-container ng-if="dataType === 'raw'">
 						<label> Raw: </label>
-						<textarea ng-model="request.rawData" columns="1"></textarea>
+						<textarea ng-model="data.rawData" columns="1"></textarea>
 					</md-input-container>
-					<div ng-repeat="formDatum in formData" layout="row" ng-if="dataType === 'form'">
-
+					<md-button type="button" class=" md-primary" ng-click="addFormDataItem()">Add Form Data Item</md-button ng-if="dataType === 'form'">
+					<div ng-repeat="formDatum in data.formData" layout="row" ng-if="dataType === 'form'">
 						<md-input-container flex="45">
 							<label> Form Key: </label>
 							<input type="text" data-ng-model="formDatum.key">
@@ -68,7 +68,7 @@
 						<input type="text" data-ng-model="getHeaders()[key]">
 					</md-input-container>
 				</div>
-				<md-button type="submit" class="md-primary" ng-class="{'md-raised md-hue-1':(requestForm.$valid) }">Send Request</md-button>
+				<md-button type="submit" class="md-primary" ng-class="{'md-raised':(requestForm.$valid) }">Send Request</md-button>
 			</form>
 		</md-content>
 	</div>
