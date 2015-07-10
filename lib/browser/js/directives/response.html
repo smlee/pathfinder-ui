@@ -1,7 +1,8 @@
-<div flex layout="row" layout-align="center center">
+<div flex layout="row" class="md-padding" id="response">
     <pre>
-        <h4>Status: {{ getResponse().status | json }}</h4>
-        <h4>Headers:<br> {{ getResponse().headers() | json }}</h4>
-        <h4><pre>Response:<br> {{ isJson ? ( getResponse().data | json) : getResponse().data }}</pre></h4>
+        <h4>URL: <span>{{reqResponse.config.historicalUrl}}</span></h4>
+        <h4>Status: <span>{{reqResponse.status | json }} {{reqResponse.statusText}}</span></h4>
+        <h4>Headers:<br> <div ng-repeat="(key, value) in resHeaders"><span><b>{{key}}:</b> {{value}}</span><br /></div></h4>
+        <h4>Response:<pre><span>{{ isJson ? ( reqResponse.data | json) : reqResponse.data }}<span></span></pre></h4>
     </pre>
 </div>
