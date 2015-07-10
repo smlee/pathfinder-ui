@@ -1,6 +1,6 @@
 {
   "name": "pathfinder-ui",
-  "version": "0.1.136",
+  "version": "0.1.1391",
   "private": false,
   "preferGlobal": false,
   "author": "Cat, Sang, Ming, Tyler",
@@ -18,13 +18,14 @@
       "email": "mingus718@gmail.com"
     },
     {
-      "name": "Tyler (Liu) Perwarski",
+      "name": "Tyler Pewarski",
       "email": "Tjp2122@gmail.com"
     }
   ],
   "dependencies": {
     "angular-ui-router": "^0.2.15",
-    "express": "^4.13.0"
+    "express": "^4.13.0",
+    "lodash": "^3.10.0"
   },
   "repository": {
     "type": "git",

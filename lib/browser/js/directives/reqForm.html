@@ -1,30 +1,64 @@
 <div flex layout="row" layout-align="center center">
-	<div class="reqForm-container md-whiteframe-z2">
+	<div class="reqForm-container">
 		<md-content class="md-padding">
 			<form name="requestForm" data-ng-submit="sendReq()">
 				<h4> Url: {{ getUrl() }} </h4>
+				<h4> Method: {{ getMethod() }}</h4>
 				<md-input-container ng-repeat="(key, value) in getParams()">
 					<label>{{ key }}</label>
 					<input type="text" data-ng-model="getParams()[key]" required>
 				</md-input-container>
-				<h4> Method: {{ getMethod() }}</h4>
-				<h4> URL Params: </h4>
-				<button type="button" ng-click="addUrlParam()">Add Param</button>
+				<h4> Query Params: </h4>
+				<md-button type="button" class=" md-primary" ng-click="addUrlParam()">Add Query Param</md-button>
 				<div ng-repeat="urlParam in getUrlParams()" layout="row">
-					<md-input-container flex="50">
+					<md-input-container flex="40">
 						<label> Param Key: </label>
 						<input type="text" data-ng-model="urlParam.key">
 					</md-input-container>
-					<md-input-container flex="50" >
+					<md-input-container flex="40" >
 						<label> Param Val: </label>
 						<input type="text" data-ng-model="urlParam.val">
 					</md-input-container>
+					<md-button type="button" class="md-icon-button" ng-click="removeUrlParam($index)" aria-label="Custom Icon Button">
+							<i class="material-icons md-dark" flex="20">highlight_off</i>
+					</md-button>
 				</div>
-				<md-input-container>
-					<label> Data: </label>
-					<textarea ng-model="request.data" columns="1"></textarea>
-				</md-input-container>
-				<md-button type="submit" class="md-primary" ng-class="{'md-raised md-hue-1':(requestForm.$valid) }">Send Request</md-button>
+				<div class="post-section" ng-if="getMethod() === 'post'">
+
+					<h4>Data </h4>
+					<md-button type="button" class="md-primary" ng-click="setDataType('form')">form data</md-button>
+					<md-button type="button" class="md-primary" ng-click="setDataType('raw')">Raw</md-button>
+					<md-input-container ng-if="dataType === 'raw'">
+						<label> Raw: </label>
+						<textarea ng-model="data.rawData" columns="1"></textarea>
+					</md-input-container>
+					<md-button type="button" class=" md-primary" ng-click="addFormDataItem()">Add Form Data Item</md-button ng-if="dataType === 'form'">
+					<div ng-repeat="formDatum in data.formData" layout="row" ng-if="dataType === 'form'">
+						<md-input-container flex="40">
+							<label> Form Key: </label>
+							<input type="text" data-ng-model="formDatum.key">
+						</md-input-container>
+						<md-input-container flex="40" >
+							<label> Form Val: </label>
+							<input type="text" data-ng-model="formDatum.val">
+						</md-input-container>
+						<md-button type="button" class="md-icon-button" ng-click="removeFormItem($index)" aria-label="Custom Icon Button">
+							<i class="material-icons md-dark" flex="20">highlight_off</i>
+						</md-button>
+					</div>
+				</div>
+				<h4>Headers</h4>
+				<div ng-repeat="(key, value) in getHeaders()" layout="row">
+					<md-input-container flex="50">
+						<label> Key: </label>
+						<input type="text" data-ng-model="key">	
+					</md-input-container>
+					<md-input-container flex="50">
+						<label> Val: </label>
+						<input type="text" data-ng-model="getHeaders()[key]">
+					</md-input-container>
+				</div>
+				<md-button type="submit" class="md-primary" ng-class="{'md-raised':(requestForm.$valid) }">Send Request</md-button>
 			</form>
 		</md-content>
 	</div>
