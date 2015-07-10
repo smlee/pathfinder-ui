@@ -2,9 +2,16 @@
 	<div>
 		<md-button type="button" class="md-primary" ng-class="{'md-raised md-hue-1':(requestForm.$valid) }" ng-click='saveToFile()'>Save To File</md-button>
 	</div>
+
+    
+	<form name="fileUpload">
+    	<input type='file' name='fileUploaded' ng-model="theFile" onchange="uploadFile(this.files)">
+    	<button name="submit"></button>
+	</form>
+
 	<div>
 		<md-list>
-		  <md-list-item class="md-2-line" ng-repeat="item in history track by $index">
+		  <md-list-item class="md-2-line" ng-repeat="item in getHistory() track by $index">
 		    <div class="md-list-item-text" id="pastReq" ng-click="populatePriorReq(item)">
 		      <h3>Url: {{ item.historicalUrl }}</h3>
 		      <p>Method: {{ item.method | uppercase }}</p>
