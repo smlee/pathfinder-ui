@@ -63,6 +63,7 @@
     width: 33.33%;
     min-width: 33.33%;
     border: 1px solid #ddd;
+    background: #fff;
 }
 
 .right-bar .resize-tab{
