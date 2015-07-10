@@ -1,6 +1,16 @@
 * {
     box-sizing: border-box;
 }
+h4 {
+    margin: 0 0 10px 0;
+    display: block;
+    font-size: 16px;
+}
+
+h4 span{
+    font-size: 14px;
+    font-weight: normal;
+}
 
 .node {
     cursor: pointer;
@@ -128,6 +138,22 @@
 
 #pastReq {
     padding-top: 14px;
+}
+
+#response {
+    width: 100%;
+}
+#response pre {
+    white-space: normal;
+    font-family: RobotoDraft,Roboto,'Helvetica Neue',sans-serif;
+}
+
+#response pre br {
+    margin: 0;
+}
+
+#response pre pre {
+    white-space: pre-wrap;
 }
 /*
 .right-bar {
