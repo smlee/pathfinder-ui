@@ -1,58 +1,58 @@
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .node {
-   cursor: pointer;
+    cursor: pointer;
 }
 
 .overlay{
-	background-color:#EEE;
+    background-color:#EEE;
 }
 
 .node circle {
-	fill: #fff;
-	stroke: steelblue;
-	stroke-width: 1.5px;
+    fill: #fff;
+    stroke: steelblue;
+    stroke-width: 1.5px;
 }
 
 .visual svg {
-	width: 100%;
-	height: 100vh;
+    width: 100%;
+    height: 100vh;
 }
 
 .node text {
-	font-size:10px; 
-	font-family:sans-serif;
+    font-size:10px;
+    font-family:sans-serif;
 }
 
 .link {
-	fill: none;
-	stroke: #ccc;
-	stroke-width: 1.5px;
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 1.5px;
 }
 
 .templink {
-	fill: none;
-	stroke: red;
-	stroke-width: 3px;
+    fill: none;
+    stroke: red;
+    stroke-width: 3px;
 }
 
 .ghostCircle.show{
-	display:block;
+    display:block;
 }
 
 .ghostCircle, .activeDrag .ghostCircle{
- 	display: none;
+    display: none;
 }
 
 .visual {
-	width: 70%;
-	display: inline-block;
+    width: 70%;
+    display: inline-block;
 }
 
 .reqForm-container {
-	width: 90%;
+    width: 90%;
 }
 
 #route-tree {
@@ -81,7 +81,7 @@
     margin-top:calc(50vh - 25px);
     z-index: 2;
 }
-.right-bar.slide {
+.slide {
     -webkit-transition:width 0.5s ease-in-out;
     transition: width 0.5s ease-in-out;
 }
@@ -123,6 +123,10 @@
 
 .clearfix {
     *zoom: 1;
+}
+
+#pastReq {
+    padding-top: 14px;
 }
 /*
 .right-bar {
