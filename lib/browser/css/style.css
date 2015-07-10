@@ -153,6 +153,13 @@ h4 span{
 }
 
 #response pre pre {
+    margin-top: 0px;
+    padding: 10px 15px;
+    background: #f5f2f0;
+    /*background: #272822;*/
+    white-space: pre-wrap;
+}
+#response code {
     white-space: pre-wrap;
 }
 /*
