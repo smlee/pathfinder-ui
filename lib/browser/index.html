@@ -1,125 +1,126 @@
 <!DOCTYPE html>
 <html>
-	<head lang="en">
-	    <meta charset="UTF-8">
-	    <title>Pathfinder-UI</title>
-        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.10.0/angular-material.min.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-	    <link rel="stylesheet" href="css/style.css"/>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Pathfinder-UI</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.10.0/angular-material.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"/>
 
 
-	</head>
-	<body  ng-app='pathfinderApp' ng-controller='MainController'>
+</head>
+<body  ng-app='pathfinderApp' ng-controller='MainController'>
 
-	<md-content class='md-padding'>
-		<div layout='row'>
-			<!-- D3.JS VISUAL HERE -->
+<md-content class='md-padding'>
+    <div layout='row'>
+        <!-- D3.JS VISUAL HERE -->
 
-				<div class="visual" id="route-tree" tree-visual="">
-				</div>
+        <div class="visual slide" id="route-tree" tree-visual="">
+        </div>
 
-			<!-- RIGHT-HAND COMMAND BAR HERE -->
+        <!-- RIGHT-HAND COMMAND BAR HERE -->
 
-				<div class="right-bar slide" ng-controller='TabBtnsController'>
-                    <!--RESIZER-->
-                    <div class="resize-tab" >
-                        <div class="resize-icon"
-                             resizer="vertical"
-                             resizer-width="4"
-                             resizer-left="#route-tree"
-                             resizer-right=".right-bar"
-                             resizer-max="60">
-                            <ng-md-icon icon="more_vert" style="fill: #ddd" size="20"></ng-md-icon>
-                        </div><br/><br/>
-                        <div class="slide-icon" shifter>
-                            <ng-md-icon ng-hide="max" icon="chevron_left" style="fill: #ddd" size="20"></ng-md-icon>
-                        </div>
-                    </div>
+        <div class="right-bar slide" ng-controller='TabBtnsController'>
+            <!--RESIZER-->
+            <div class="resize-tab" >
+                <div class="resize-icon"
+                     resizer="vertical"
+                     resizer-width="4"
+                     resizer-left="#route-tree"
+                     resizer-right=".right-bar"
+                     resizer-max="90">
+                    <ng-md-icon icon="more_vert" style="fill: #ddd" size="20"></ng-md-icon>
+                </div><br/><br/>
+                <div class="slide-icon" shifter>
+                    <ng-md-icon ng-hide="max" icon="chevron_left" style="fill: #ddd" size="20"></ng-md-icon>
+                </div>
+            </div>
 
-                    <!-- class='tab-btn' -->
-				<md-content>
-					
-					<md-tabs md-selected="selectedIndex" md-border-bottom md-dynamic-height>
+            <!-- class='tab-btn' -->
+            <md-content>
 
-						<md-tab label = "Send">
-						<div ng-controller='AuthTabsController'>
-							<md-tabs md-selected="selectedAuthIndex">
-								<md-tab label="Normal">
-									<tab1></tab1>
-								</md-tab>
-								<md-tab label="Basic Auth">
-									<basic-auth-tab></basic-auth-tab>
-								</md-tab>
-								<md-tab label="Digest Auth">
-									<!-- <tab1></tab1> -->
-								</md-tab>
-								<md-tab label="OAuth 2.0">
-									<o-auth-tab></o-auth-tab>
-								</md-tab>
-							</md-tabs>
-						</div>	<!-- end of auth tabs  -->
-						</md-tab>
+                <md-tabs md-selected="selectedIndex" md-border-bottom md-dynamic-height>
 
-						<md-tab label = "History">
-							<history></history>
-						</md-tab>
-						<md-tab label = "Response">
-							<tab3></tab3>
-						</md-tab>
-						<md-tab label = "???">
-							<tab4></tab4>
-						</md-tab>
-					</md-tabs>
+                    <md-tab label = "Send">
+                        <div ng-controller='AuthTabsController'>
+                            <md-tabs md-selected="selectedAuthIndex">
+                                <md-tab label="Normal">
+                                    <tab1></tab1>
+                                </md-tab>
+                                <md-tab label="Basic Auth">
+                                    <basic-auth-tab></basic-auth-tab>
+                                </md-tab>
+                                <md-tab label="Digest Auth">
+                                    <!-- <tab1></tab1> -->
+                                </md-tab>
+                                <md-tab label="OAuth 2.0">
+                                    <o-auth-tab></o-auth-tab>
+                                </md-tab>
+                            </md-tabs>
+                        </div>	<!-- end of auth tabs  -->
+                    </md-tab>
 
-				</md-content>
-				</div>
+                    <md-tab label = "History">
+                        <history></history>
+                    </md-tab>
+                    <md-tab label = "Response">
+                        <tab3></tab3>
+                    </md-tab>
+                    <md-tab label = "???">
+                        <tab4></tab4>
+                    </md-tab>
+                </md-tabs>
 
-		</div>
-	</md-content>
+            </md-content>
+        </div>
 
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    </div>
+</md-content>
 
-    <!-- Angular Material Dependencies -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.5.0/angular-material-icons.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 
-    <!-- Angular Material Javascript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.10.0/angular-material.min.js"></script>
+<!-- Angular Material Dependencies -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-cookies.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.5.0/angular-material-icons.min.js"></script>
 
-		<!-- Other Libraries -->
+<!-- Angular Material Javascript -->
+<script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.10.0/angular-material.min.js"></script>
 
-		<script src="http://d3js.org/d3.v3.min.js"></script>
-		<script src="/lodash/index.js"></script>
+<!-- Other Libraries -->
 
-		<!-- Main Angular App -->
-		<script src="js/app.js"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="/lodash/index.js"></script>
 
-		<!-- Factories -->
-		<script src="js/factories/RequestFactory.js"></script>
-		<script src="js/factories/HistoryFactory.js"></script>
-		<script src="js/factories/DataFactory.js"></script>
-		<script src="js/factories/EncoderFactory.js"></script>
-		
-		<script src="js/controllers/MainController.js"></script>
-		<script src="js/controllers/TabBtnsController.js"></script>
-		<script src="js/controllers/AuthTabsController.js"></script>
-		
+<!-- Main Angular App -->
+<script src="js/app.js"></script>
 
+<!-- Factories -->
+<script src="js/factories/RequestFactory.js"></script>
+<script src="js/factories/HistoryFactory.js"></script>
+<script src="js/factories/DataFactory.js"></script>
+<script src="js/factories/EncoderFactory.js"></script>
 
-		<!-- Directives -->
-		<script src="js/directives/tab-directives.js"></script>
-		<script src="js/directives/D3directive.js"></script>
-		<script src="js/directives/reqForm-directive.js"></script>
-		<script src="js/directives/history-directive.js"></script>
-		<script src="js/directives/basicAuthTab.js"></script>
-	    <script src="js/directives/resize.js"></script>
-	    <script src="js/directives/response.js"></script>
-	    <script src="js/directives/oAuthTab.js"></script>
+<script src="js/controllers/MainController.js"></script>
+<script src="js/controllers/TabBtnsController.js"></script>
+<script src="js/controllers/AuthTabsController.js"></script>
 
 
-	</body>
+
+<!-- Directives -->
+<script src="js/directives/tab-directives.js"></script>
+<script src="js/directives/D3directive.js"></script>
+<script src="js/directives/reqForm-directive.js"></script>
+<script src="js/directives/history-directive.js"></script>
+<script src="js/directives/basicAuthTab.js"></script>
+<script src="js/directives/resize.js"></script>
+<script src="js/directives/response.js"></script>
+<script src="js/directives/oAuthTab.js"></script>
+
+
+</body>
 
 </html>
