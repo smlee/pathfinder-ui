@@ -1,6 +1,6 @@
 {
   "name": "pathfinder-ui",
-  "version": "0.1.138",
+  "version": "0.1.1391",
   "private": false,
   "preferGlobal": false,
   "author": "Cat, Sang, Ming, Tyler",
@@ -18,7 +18,7 @@
       "email": "mingus718@gmail.com"
     },
     {
-      "name": "Tyler (Liu) Perwarski",
+      "name": "Tyler Pewarski",
       "email": "Tjp2122@gmail.com"
     }
   ],
