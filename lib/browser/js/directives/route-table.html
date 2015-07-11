@@ -1,0 +1,29 @@
+
+<md-input-container flex="40" >
+    <label> Search </label>
+    <input type="text" data-ng-model="searchTerm">
+</md-input-container>
+
+<div id="routeTable">
+	<div layout="row" class="routeTableRow">
+		<div class="tableHead routeTableCol" layout="column" flex="20">
+			<h3>Method</h3>
+		</div>
+		<div class="tableHead routeTableCol" layout="column" flex="50">
+			<h3>SubRouter</h3>
+		</div>
+		<div class="tableHead routeTableCol" layout="column" flex="30"><h3>Path</h3>
+		</div>
+	</div>
+	<div class="routeTableRow" layout="row" ng-repeat="route in table | filter:searchTerm" ng-click="populateData(route)">
+		<div class="routeTableCol" layout="column" flex="20">
+			{{ route.method | uppercase }}
+		</div>
+		<div class="routeTableCol" layout="column" flex="50">
+			{{ route.url }}
+		</div>
+		<div class="routeTableCol" layout="column" flex="30">
+			{{ route.subRouter }}
+		</div>
+	</div>
+</div>

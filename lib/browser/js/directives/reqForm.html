@@ -8,7 +8,6 @@
                     <label>{{ key }}</label>
                     <input type="text" data-ng-model="getParams()[key]" required>
                 </md-input-container>
-                <h4> Query Params: </h4>
                 <md-button type="button" class=" md-primary" ng-click="addUrlParam()">Add Query Param</md-button>
                 <div ng-repeat="urlParam in getUrlParams()" layout="row">
                     <md-input-container flex="40">

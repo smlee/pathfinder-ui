@@ -56,8 +56,12 @@ h4 span{
     display: none;
 }
 
-.visual {
+#visualContainer {
     width: 70%;
+}
+
+.visual {
+    width: 100%;
     display: inline-block;
 }
 
@@ -66,7 +70,7 @@ h4 span{
 }
 
 #route-tree {
-    width: 66.67%;
+    width: 100%;
 }
 
 .right-bar {
@@ -162,6 +166,22 @@ h4 span{
 #response code {
     white-space: pre-wrap;
 }
+
+.routeTableRow {
+    border-top: 1px solid #D3D3D3;
+    padding: 5px;
+}
+
+.routeTableCol {
+    border-right: 1px solid #D3D3D3;
+    padding: 5px;
+}
+
+#routeTable {
+  width: 100%;
+}
+
+
 /*
 .right-bar {
 	width: 30%;
