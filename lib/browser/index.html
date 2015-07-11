@@ -14,12 +14,21 @@
 <body  ng-app='pathfinderApp' ng-controller='MainController'>
 
 <md-content class='md-padding'>
+
+
+
+
     <div layout='row'>
         <!-- D3.JS VISUAL HERE -->
+        <div id="visualContainer" class="slide">
+                <md-button ng-if="selected === 'Tree'" type="button" class="md-primary md-button md-default-theme" ng-click="changeDisplay('Table')">View As Table</md-button>
+                <md-button type="button" ng-if="selected === 'Table'" class="md-primary md-button md-default-theme" ng-click="changeDisplay('Tree')">View As Tree</md-button>
+            <div ng-show="selected === 'Tree'" class="visual" id="route-tree" tree-visual="">
+            </div>
 
-        <div class="visual slide" id="route-tree" tree-visual="">
+            <!-- TABLE VISUAL HERE -->
+            <route-table ng-show="selected === 'Table'"></route-table>
         </div>
-
         <!-- RIGHT-HAND COMMAND BAR HERE -->
 
         <div class="right-bar slide" ng-controller='TabBtnsController'>
@@ -28,7 +37,7 @@
                 <div class="resize-icon"
                      resizer="vertical"
                      resizer-width="4"
-                     resizer-left="#route-tree"
+                     resizer-left="#visualContainer"
                      resizer-right=".right-bar"
                      resizer-max="90">
                     <ng-md-icon icon="more_vert" style="fill: #ddd" size="20"></ng-md-icon>
@@ -52,12 +61,13 @@
                                 <md-tab label="Basic Auth">
                                     <basic-auth-tab></basic-auth-tab>
                                 </md-tab>
-                                <md-tab label="Digest Auth">
-                                    <!-- <tab1></tab1> -->
+
+<!--                                 <md-tab label="Digest Auth">
                                 </md-tab>
                                 <md-tab label="OAuth 2.0">
                                     <o-auth-tab></o-auth-tab>
-                                </md-tab>
+                                </md-tab> -->
+
                             </md-tabs>
                         </div>	<!-- end of auth tabs  -->
                     </md-tab>
@@ -67,9 +77,6 @@
                     </md-tab>
                     <md-tab label = "Response">
                         <tab3></tab3>
-                    </md-tab>
-                    <md-tab label = "???">
-                        <tab4></tab4>
                     </md-tab>
                 </md-tabs>
 
@@ -121,6 +128,7 @@
 <script src="js/directives/response.js"></script>
 <script src="js/directives/oAuthTab.js"></script>
 <script src="js/prism.js"></script>
+<script src="js/directives/route-table-directive.js"></script>
 
 
 </body>
