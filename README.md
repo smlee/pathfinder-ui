@@ -26,16 +26,16 @@ app.use('/foo', barmiddleware )
 app.get('/*', foo)
 ```
 
-Place the pathfinder-ui routing middleware before your routes.
+Put the pathfinder-ui routing middleware before your routes.
 
 ```js
 app.use('/foo', barmiddleware )
-app.get('/bar', foo)
+app.get('/*', foo)
 pathfinderUI(app);
 ```
 
 This function grabs your express routes and passes the data into the module.
-Place this line after all of your routes/routers/middlewares.
+Put this line after all of your routes/routers/middlewares.
 
 You access the interface by going to localhost:PORT/yourCustomPath
 
