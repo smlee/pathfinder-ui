@@ -33,17 +33,29 @@
                     </md-input-container>
                     <md-button type="button" class=" md-primary" ng-click="addFormDataItem()">Add Form Data Item</md-button ng-if="dataType === 'form'">
                     <div ng-repeat="formDatum in data.formData" layout="row" ng-if="dataType === 'form'">
-                        <md-input-container flex="40">
+                        <md-input-container flex="30">
                             <label> Form Key: </label>
                             <input type="text" data-ng-model="formDatum.key">
                         </md-input-container>
-                        <md-input-container flex="40" >
+                        <md-input-container ng-if="dataFormat === 'Text'" flex="45" >
                             <label> Form Val: </label>
                             <input type="text" data-ng-model="formDatum.val">
                         </md-input-container>
-                        <md-button type="button" class="md-icon-button" ng-click="removeFormItem($index)" aria-label="Custom Icon Button">
+
+                        <!-- <form flex="45" name="fileUpload" ng-if="dataFormat==='File'" method='post' action='/api/checkout/form' enctype="multipart/form-data"> -->
+                            <div flex="45" ng-if="dataFormat === 'File'">
+                                <input type='file' name='fileUploaded' onchange="uploadFile(this.files)">
+                            </div>
+                     <!--    </form> -->
+
+                        <md-select flex="20" ng-model="dataFormat" placeholder="Text">
+                            <md-option ng-value="format" ng-repeat="format in fileFormats">{{ format }}</md-option>
+                        </md-select>
+
+                        <md-button flex="5" type="button" class="md-icon-button" ng-click="removeFormItem($index)" aria-label="Custom Icon Button">
                             <i class="material-icons md-dark" flex="20">highlight_off</i>
                         </md-button>
+
                     </div>
                 </div>
                 <h4>Headers</h4>
