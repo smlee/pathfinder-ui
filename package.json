@@ -1,6 +1,6 @@
 {
   "name": "pathfinder-ui",
-  "version": "0.1.1391",
+  "version": "0.1.14",
   "private": false,
   "preferGlobal": false,
   "author": "Cat, Sang, Ming, Tyler",
@@ -25,8 +25,7 @@
   "dependencies": {
     "angular-ui-router": "^0.2.15",
     "cli-table": "^0.3.1",
-    "express": "^4.13.0",
-    "lodash": "^3.10.0"
+    "express": "^4.13.0"
   },
   "repository": {
     "type": "git",
