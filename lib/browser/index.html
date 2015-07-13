@@ -21,8 +21,8 @@
     <div layout='row'>
         <!-- D3.JS VISUAL HERE -->
         <div id="visualContainer" class="slide">
-                <md-button ng-if="selected === 'Tree'" type="button" class="md-primary md-button md-default-theme" ng-click="changeDisplay('Table')">View As Table</md-button>
-                <md-button type="button" ng-if="selected === 'Table'" class="md-primary md-button md-default-theme" ng-click="changeDisplay('Tree')">View As Tree</md-button>
+                <md-button ng-if="selected === 'Tree'" type="button" class="md-primary md-button md-default-theme md-raised" ng-click="changeDisplay('Table')">View As Table</md-button>
+                <md-button type="button" ng-if="selected === 'Table'" class="md-primary md-button md-default-theme md-raised" ng-click="changeDisplay('Tree')">View As Tree</md-button>
             <div ng-show="selected === 'Tree'" class="visual" id="route-tree" tree-visual="">
             </div>
 

@@ -6,38 +6,32 @@ Pathfinder-UI is a tool that allows you to visualize and test the routes in an e
 
 ## Installation
 
+NPM install the module.
+
 ```bash
   npm install pathfinder-ui --save
- ```
+```
 
- NPM install the module.
 
 ## Usage
 
+Require the module in your app.
 ```js
 var pathfinderUI = require('pathfinder-ui')
 ```
 
-Require the module in your app.
+Put our pathfinder-ui routing where you keep your middleware.
 
 ```js
-app.use('yourCustomPath', pathfinderUI.router)
-app.use('/foo', barmiddleware )
-app.get('/*', foo)
+app.use('/pathfinder', function(req, res, next){
+	pathfinderUI(app)
+	next()
+}, pathfinderUI.router)
 ```
 
-Put the pathfinder-ui routing middleware before your routes.
+pathfinderUI(app) grabs your express routes and passes the data into the pathfinder module.
 
-```js
-app.use('/foo', barmiddleware )
-app.get('/*', foo)
-pathfinderUI(app);
-```
-
-This function grabs your express routes and passes the data into the module.
-Put this line after all of your routes/routers/middlewares.
-
-You access the interface by going to localhost:PORT/yourCustomPath
+You access the interface by going to localhost:PORT/pathfinder
 
 <!-- ## Tests
 
