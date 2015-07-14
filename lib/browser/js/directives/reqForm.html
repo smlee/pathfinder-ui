@@ -2,7 +2,7 @@
     <div class="reqForm-container">
         <md-content class="md-padding">
             <form name="requestForm" data-ng-submit="sendReq(); getRes()">
-                <h4> Url: {{ getUrl() }} </h4>
+                <h4> URL: {{ getUrl() }} </h4>
                 <h4> Method: {{ getMethod() }}</h4>
                 <md-input-container ng-repeat="(key, value) in getParams()">
                     <label>{{ key }}</label>
