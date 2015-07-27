@@ -1,5 +1,4 @@
 #Pathfinder-UI
-=========
 
 Pathfinder-UI is a tool that allows you to visualize and test the routes in an express application.	
 
