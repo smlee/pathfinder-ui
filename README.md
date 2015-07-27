@@ -29,7 +29,7 @@ app.use('/pathfinder', function(req, res, next){
 
 pathfinderUI(app) grabs your express routes and passes the data into the pathfinder module.
 
-You access the interface by going to localhost:PORT/pathfinder
+You access the interface by going to localhost:PORT/pathfinder in your browser.
 
 <!-- ## Tests
 
