@@ -1,0 +1,20 @@
+<md-content class="md-padding">
+    <form name="headersForm" ng-submit="setHeaders()">
+        <md-button type="button" class="md-primary" ng-click="addHeader()">Add Header</md-button>
+        <div ng-repeat="header in getHeaders()" layout="row">
+            <md-input-container flex="40">
+                <label> Header Key: </label>
+                <input type="text" data-ng-model="header.key">
+            </md-input-container>
+            <md-input-container flex="40" >
+                <label> Header Val: </label>
+                <input type="text" data-ng-model="header.value">
+            </md-input-container>
+            <md-button type="button" class="md-icon-button" ng-click="removeHeader($index)" aria-label="Custom Icon Button">
+                <i class="material-icons md-dark" flex="20">highlight_off</i>
+            </md-button>
+        </div>
+        <md-button type="submit" class="md-primary" ng-class="{'md-raised md-hue-1':(requestForm.$valid) }">Refresh Headers</md-button>
+
+    </form>
+</md-content>

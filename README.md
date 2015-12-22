@@ -1,8 +1,8 @@
-#Pathfinder-UI
+Pathfinder-UI
 
-Pathfinder-UI is a tool that allows you to visualize and test the routes in an express application.	
+=========
 
-![Pathfinder Screenshot](https://s3.amazonaws.com/poly-screenshots.angel.co/Project/4b/154634/8a313313182b2bab4b0e00f483f647b7-original.png)
+Pathfinder-UI is a tool that allows you to visualize and test the routes in an express application.
 
 ## Installation
 
@@ -31,7 +31,7 @@ app.use('/pathfinder', function(req, res, next){
 
 pathfinderUI(app) grabs your express routes and passes the data into the pathfinder module.
 
-You access the interface by going to localhost:PORT/pathfinder in your browser.
+You access the interface by going to localhost:PORT/pathfinder
 
 <!-- ## Tests
 
