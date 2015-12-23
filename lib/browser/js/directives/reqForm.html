@@ -9,11 +9,14 @@
                 <div>
                     <h4> Method: <span>{{ getMethod() | uppercase }}</span></h4>
                 </div>
+            <!-- Url & Method Section -->
+
+            <!-- Dynamic Params -->
                 <md-input-container ng-repeat="(key, value) in getParams()">
                     <label>{{ key }}</label>
                     <input type="text" data-ng-model="getParams()[key]" required>
                 </md-input-container>
-            <!-- Url & Method Section -->
+             <!-- Dynamic Params -->
 
             <!-- Query Params Section -->
                 <md-button type="button" class=" md-primary" ng-click="addUrlParam()">Add Query Param</md-button>
@@ -33,17 +36,20 @@
                 <!-- Query Params Section -->
 
                 <!-- Headers Section -->
-                <div ng-show="getHeaders().length">
-                    <h4>Headers:</h4>
+                <div>
+                    <md-button type="button" class="md-primary" ng-click="addHeader()">Add Header</md-button>
                     <div ng-repeat="header in getHeaders()" layout="row">
-                        <md-input-container flex="50">
+                        <md-input-container flex="40">
                             <label> Key: </label>
                             <input type="text" data-ng-model="header.key">
                         </md-input-container>
-                        <md-input-container flex="50">
+                        <md-input-container flex="40">
                             <label> Val: </label>
-                            <input type="text" data-ng-model="header.value">
+                            <input type="text" data-ng-model="header.val">
                         </md-input-container>
+                        <md-button type="button" class="md-icon-button" ng-click="removeHeader($index)" aria-label="Custom Icon Button">
+                            <i class="material-icons md-dark" flex="20">highlight_off</i>
+                        </md-button>
                     </div>
                 </div>
                 <!-- Headers Section -->
