@@ -9,7 +9,7 @@
   "contributors": [
     {
       "name": "Cat Lau",
-      "email": "foo@foo.com"
+      "email": "clau.catherine@gmail.com"
     },
     {
       "name": "Sangmin Lee",
@@ -26,7 +26,6 @@
   ],
   "dependencies": {
     "angular-ui-router": "^0.2.15",
-    "cli-table": "^0.3.1",
     "express": "^4.13.0"
   },
   "repository": {
