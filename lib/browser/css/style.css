@@ -185,6 +185,11 @@ h4 span{
     padding: 0px;
     margin: 0px;
 }
+
+#historicalUrl {
+    word-wrap: break-word;
+    line-height: 1.25em;
+}
 /*
 .right-bar {
 	width: 30%;

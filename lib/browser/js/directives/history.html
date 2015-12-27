@@ -15,7 +15,7 @@
 		<md-list>
 		  <md-list-item class="md-2-line" ng-repeat="item in getHistory() track by $index">
 		    <div class="md-list-item-text" id="pastReq" ng-click="populatePriorReq(item)">
-		      <h3>URL: {{ item.historicalUrl }}</h3>
+		      <h3 id="historicalUrl">{{ item.historicalUrl }}</h3>
 		      <p>Method: {{ item.method | uppercase }}</p>
 		    </div>
 		    <md-checkbox ng-click="addToSaveList(item)" ng-checked="saveList.indexOf(item) > -1"></md-checkbox>
