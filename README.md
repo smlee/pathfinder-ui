@@ -1,7 +1,5 @@
 # Pathfinder-UI
 
-=========
-
 Pathfinder-UI is a tool that allows you to visualize and test the routes in an Express application.
 ### Interactive Tree View
 ![View Routes As Tree](https://s3.amazonaws.com/poly-screenshots.angel.co/Project/4b/154634/8a313313182b2bab4b0e00f483f647b7-original.png)
