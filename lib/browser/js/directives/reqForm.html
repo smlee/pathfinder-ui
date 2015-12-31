@@ -2,12 +2,23 @@
     <div class="reqForm-container">
         <md-content class="md-padding">
             <form name="requestForm" data-ng-submit="sendReq(); getRes()">
-                <h4> URL: {{ getUrl() }} </h4>
-                <h4> Method: {{ getMethod() }}</h4>
+            <!-- Url & Method Section -->
+                <div>
+                    <h4> Url: <span>{{ getUrl() }}</span></h4> 
+                 </div>
+                <div>
+                    <h4> Method: <span>{{ getMethod() | uppercase }}</span></h4>
+                </div>
+            <!-- Url & Method Section -->
+
+            <!-- Dynamic Params -->
                 <md-input-container ng-repeat="(key, value) in getParams()">
                     <label>{{ key }}</label>
                     <input type="text" data-ng-model="getParams()[key]" required>
                 </md-input-container>
+             <!-- Dynamic Params -->
+
+            <!-- Query Params Section -->
                 <md-button type="button" class=" md-primary" ng-click="addUrlParam()">Add Query Param</md-button>
                 <div ng-repeat="urlParam in getUrlParams()" layout="row">
                     <md-input-container flex="40">
@@ -22,9 +33,30 @@
                         <i class="material-icons md-dark" flex="20">highlight_off</i>
                     </md-button>
                 </div>
-                <div class="post-section" ng-if="getMethod() === 'post'">
+                <!-- Query Params Section -->
 
-                    <h4>Data </h4>
+                <!-- Headers Section -->
+                <div>
+                    <md-button type="button" class="md-primary" ng-click="addHeader()">Add Header</md-button>
+                    <div ng-repeat="header in getHeaders()" layout="row">
+                        <md-input-container flex="40">
+                            <label> Key: </label>
+                            <input type="text" data-ng-model="header.key">
+                        </md-input-container>
+                        <md-input-container flex="40">
+                            <label> Val: </label>
+                            <input type="text" data-ng-model="header.val">
+                        </md-input-container>
+                        <md-button type="button" class="md-icon-button" ng-click="removeHeader($index)" aria-label="Custom Icon Button">
+                            <i class="material-icons md-dark" flex="20">highlight_off</i>
+                        </md-button>
+                    </div>
+                </div>
+                <!-- Headers Section -->
+
+                <!-- POST/PUT Body Section -->
+                <div class="post-section" ng-if="getMethod() === 'post' || getMethod() === 'put'">
+                    <h4>Body:</h4>
                     <md-button type="button" class="md-primary" ng-click="setDataType('form')">form data</md-button>
                     <md-button type="button" class="md-primary" ng-click="setDataType('raw')">Raw</md-button>
                     <md-input-container ng-if="dataType === 'raw'">
@@ -46,18 +78,11 @@
                         </md-button>
                     </div>
                 </div>
-                <h4>Headers</h4>
-                <div ng-repeat="(key, value) in getHeaders()" layout="row">
-                    <md-input-container flex="50">
-                        <label> Key: </label>
-                        <input type="text" data-ng-model="key">
-                    </md-input-container>
-                    <md-input-container flex="50">
-                        <label> Val: </label>
-                        <input type="text" data-ng-model="getHeaders()[key]">
-                    </md-input-container>
-                </div>
+                <!-- POST/PUT Body Section -->
+
+                <!-- Send Request Button -->
                 <md-button type="submit" class="md-primary md-raised">Send Request</md-button>
+                <!-- Send Request Button -->
             </form>
         </md-content>
     </div>

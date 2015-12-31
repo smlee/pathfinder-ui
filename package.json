@@ -1,13 +1,15 @@
 {
   "name": "pathfinder-ui",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "private": false,
   "preferGlobal": false,
-  "author": "Cat, Sang, Ming, Tyler",
+  "author": {
+    "name": "Cat, Sang, Ming, Tyler"
+  },
   "contributors": [
     {
       "name": "Cat Lau",
-      "email": "foo@foo.com"
+      "email": "clau.catherine@gmail.com"
     },
     {
       "name": "Sangmin Lee",
@@ -24,12 +26,11 @@
   ],
   "dependencies": {
     "angular-ui-router": "^0.2.15",
-    "cli-table": "^0.3.1",
     "express": "^4.13.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/smlee/pathfinder-ui"
+    "url": "git+https://github.com/smlee/pathfinder-ui.git"
   },
   "bugs": {
     "url": "https://github.com/smlee/pathfinder-ui/issues"
@@ -40,5 +41,47 @@
     "postman"
   ],
   "analyze": true,
-  "license": "MIT"
+  "license": "MIT",
+  "gitHead": "46706909807a68099fa19a4220c14566cf7c7ff3",
+  "description": "Pathfinder-UI",
+  "homepage": "https://github.com/smlee/pathfinder-ui#readme",
+  "_id": "pathfinder-ui@1.0.0",
+  "scripts": {},
+  "_shasum": "e2564436fbf5630644b307ca0b5839ed6c930807",
+  "_from": "pathfinder-ui@*",
+  "_npmVersion": "2.10.1",
+  "_nodeVersion": "0.12.4",
+  "_npmUser": {
+    "name": "minglei",
+    "email": "NoEmail@gmail.com"
+  },
+  "dist": {
+    "shasum": "e2564436fbf5630644b307ca0b5839ed6c930807",
+    "tarball": "http://registry.npmjs.org/pathfinder-ui/-/pathfinder-ui-1.0.0.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "minglei",
+      "email": "NoEmail@gmail.com"
+    },
+    {
+      "name": "mingus718",
+      "email": "mingus718@gmail.com"
+    },
+    {
+      "name": "tyler-pewarski",
+      "email": "tjp2122@gmail.com"
+    },
+    {
+      "name": "smlee",
+      "email": "sangmlee23@gmail.com"
+    },
+    {
+      "name": "cl2205",
+      "email": "clau.catherine@gmail.com"
+    }
+  ],
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/pathfinder-ui/-/pathfinder-ui-1.0.0.tgz",
+  "readme": "ERROR: No README data found!"
 }

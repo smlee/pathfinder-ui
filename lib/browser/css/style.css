@@ -181,7 +181,15 @@ h4 span{
   width: 100%;
 }
 
+.md-button {
+    padding: 0px;
+    margin: 0px;
+}
 
+#historicalUrl {
+    word-wrap: break-word;
+    line-height: 1.25em;
+}
 /*
 .right-bar {
 	width: 30%;

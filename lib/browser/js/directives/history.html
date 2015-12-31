@@ -1,18 +1,21 @@
 <md-content class="md-padding">
-	<div>
-		<md-button type="button" class="md-primary" ng-class="{'md-raised md-hue-1':(requestForm.$valid) }" ng-click='saveToFile()'>Save To File</md-button>
+	<div layout="row" layout-fill>
+		<md-button flex="33" type="button" class="md-primary" ng-class="{'md-raised md-hue-1':(requestForm.$valid) }" ng-click='saveToFile()'>Save To File</md-button>
+		<md-button flex="40" type="button" class="md-primary" ng-class="{'md-raised md-hue-1':(requestForm.$valid) }" ng-click='clearHistory()'>Clear History</md-button>
+		<md-button flex="25" type="button" class="md-primary" ng-class="{'md-raised md-hue-1':(requestForm.$valid) }" ng-click="showUploadButton = !showUploadButton">Upload</md-button>
 	</div>
 
-    
-	<form name="fileUpload">
-    	<input type='file' name='fileUploaded' ng-model="theFile" onchange="uploadFile(this.files)">
-	</form>
+    <div>
+		<form name="fileUpload">
+	    	<input ng-if="showUploadButton" type='file' name='fileUploaded' ng-model="theFile" onchange="uploadFile(this.files)">
+		</form>
+	</div>
 
 	<div>
 		<md-list>
 		  <md-list-item class="md-2-line" ng-repeat="item in getHistory() track by $index">
 		    <div class="md-list-item-text" id="pastReq" ng-click="populatePriorReq(item)">
-		      <h3>URL: {{ item.historicalUrl }}</h3>
+		      <h3 id="historicalUrl">{{ item.historicalUrl }}</h3>
 		      <p>Method: {{ item.method | uppercase }}</p>
 		    </div>
 		    <md-checkbox ng-click="addToSaveList(item)" ng-checked="saveList.indexOf(item) > -1"></md-checkbox>
