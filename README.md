@@ -1,15 +1,20 @@
-Pathfinder-UI
+# Pathfinder-UI
 
 =========
 
-Pathfinder-UI is a tool that allows you to visualize and test the routes in an express application.
+Pathfinder-UI is a tool that allows you to visualize and test the routes in an Express application.
+### Interactive Tree View
+![View Routes As Tree](https://s3.amazonaws.com/poly-screenshots.angel.co/Project/4b/154634/8a313313182b2bab4b0e00f483f647b7-original.png)
+
+### Table View
+![View Routes As Table](https://s3.amazonaws.com/poly-screenshots.angel.co/Project/4b/154634/8b4aff1d7a5b7a648773bd7915b19791-original.png)
 
 ## Installation
 
 NPM install the module.
 
 ```bash
-  npm install pathfinder-ui --save
+  npm install pathfinder-ui --save-dev
 ```
 
 
