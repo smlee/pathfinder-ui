@@ -41,6 +41,5 @@
     "postman"
   ],
   "analyze": true,
-  "license": "MIT",
-  "readme": "README.md"
+  "license": "MIT"
 }
