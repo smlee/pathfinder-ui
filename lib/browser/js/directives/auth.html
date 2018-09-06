@@ -1,0 +1,33 @@
+<div class="auth-container">
+    <h1>Configure OAuth Token</h1>
+    <form data-ng-submit="getToken()" name="authForm">
+        <md-input-container>
+            <label>
+                Token Service Url
+            </label>
+            <input tpye="text" data-ng-model="tokenUrl" required />
+        </md-input-container>
+        <md-input-container>
+            <label>
+                Client Id
+            </label>
+            <input type="text" data-ng-model="clientId" required />
+        </md-input-container>
+        <md-input-container>
+            <label>
+                Client Secret
+            </label>
+            <input type="text" data-ng-model="clientSecret" required />
+        </md-input-container>
+        <md-input-container>
+            <label>
+                Audience
+            </label>
+            <input type="text" data-ng-model="audience" required />
+        </md-input-container>
+        <md-button type="submit">Go</md-button>
+    </form>
+    <div data-ng-if="errorMessage">
+        <label>{{errorMessage}}</label>
+    </div>
+</div>
