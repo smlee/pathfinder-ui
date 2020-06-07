@@ -1,0 +1,58 @@
+<div class="auth-container">
+    <md-input-group>
+        <select data-ng-model="authType">
+            <option data-ng-repeat="option in authOptions" data="option">{{option}}</option>
+        </select>
+    </md-input-group>
+    <div data-ng-if="authType === 'Basic'">
+        <h1>Configure Basic Auth</h1>
+        <form data-ng-submit="setBasic()">
+            <md-input-container>
+                <label>
+                    User Name
+                </label>
+                <input type="text" data-ng-model="basicAuth.userName" required/>
+            </md-input-container>
+            <md-input-container>
+                <label>
+                    Password
+                </label>
+                <input type="text" data-ng-model="basicAuth.password" required />
+            </md-input-container>
+            <md-button type="submit">Go</md-button>
+        </form>
+    </div>
+    <div data-ng-if="authType === 'OpenId'">
+        <h1>Configure OAuth Token</h1>
+        <form data-ng-submit="getToken()" name="authForm">
+            <md-input-container>
+                <label>
+                    Token Service Url
+                </label>
+                <input tpye="text" data-ng-model="tokenUrl" required />
+            </md-input-container>
+            <md-input-container>
+                <label>
+                    Client Id
+                </label>
+                <input type="text" data-ng-model="clientId" required />
+            </md-input-container>
+            <md-input-container>
+                <label>
+                    Client Secret
+                </label>
+                <input type="text" data-ng-model="clientSecret" required />
+            </md-input-container>
+            <md-input-container>
+                <label>
+                    Audience
+                </label>
+                <input type="text" data-ng-model="audience" required />
+            </md-input-container>
+            <md-button type="submit">Go</md-button>
+        </form>
+    </div>
+    <div data-ng-if="message">
+        <h5>{{message}}</h5>
+    </div>
+</div>

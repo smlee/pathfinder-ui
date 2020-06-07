@@ -1,5 +1,5 @@
 {
-  "name": "pathfinder-ui",
+  "name": "pathfinder-ui-auth",
   "version": "1.0.2",
   "private": false,
   "preferGlobal": false,
@@ -10,18 +10,6 @@
     {
       "name": "Cat Lau",
       "email": "clau.catherine@gmail.com"
-    },
-    {
-      "name": "Sangmin Lee",
-      "email": "sangmlee23@gmail.com"
-    },
-    {
-      "name": "Ming Lei",
-      "email": "mingus718@gmail.com"
-    },
-    {
-      "name": "Tyler Pewarski",
-      "email": "Tjp2122@gmail.com"
     }
   ],
   "dependencies": {
